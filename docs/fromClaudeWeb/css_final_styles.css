@@ -1,0 +1,274 @@
+/* =============================================
+   CSS Additions for Service Pricing & Testimonials
+   ============================================= */
+
+/* Service Card Pricing */
+.service-pricing {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, #F8F8FF, #9CAF88);
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.service-pricing .price {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #D4AF37;
+  margin-bottom: 0.25rem;
+}
+
+.service-pricing .duration {
+  font-size: 0.875rem;
+  color: #2F2F2F;
+  font-weight: 500;
+}
+
+/* Testimonials Responsive Grid */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .testimonial-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Service Cards Hover Enhanced */
+.service-card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  border-color: #D4AF37;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-card:hover .service-pricing {
+  background: linear-gradient(135deg, #D4AF37, #9CAF88);
+}
+
+.service-card:hover .service-pricing .price {
+  color: white;
+}
+
+.service-card:hover .service-pricing .duration {
+  color: #F8F8FF;
+}
+
+/* Improved Typography */
+.hero-title {
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* About Section Enhanced */
+.about-intro {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23D4AF37" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%239CAF88" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+/* Contact Info Enhanced */
+.contact-item a {
+  transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+  transform: translateX(4px);
+}
+
+/* Button Improvements */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Section Spacing Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .about-intro,
+  .services-preview,
+  .testimonials,
+  .contact-preview {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Service Grid Responsive */
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .service-card:nth-child(4),
+  .service-card:nth-child(5) {
+    grid-column: span 1;
+  }
+  
+  /* Center last row if needed */
+  .services-grid::after {
+    content: '';
+    grid-column: span 1;
+  }
+}
+
+/* Testimonial Card Enhancements */
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card::before {
+  color: #9CAF88;
+  font-size: 3rem;
+}
+
+/* Loading Performance */
+.hero-image img,
+.about-image img {
+  transition: opacity 0.3s ease;
+}
+
+.hero-image img:not([src]),
+.about-image img:not([src]) {
+  opacity: 0;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus States Enhanced */
+.nav-link:focus,
+.bottom-nav-item:focus,
+.btn:focus,
+.service-link:focus {
+  outline: 3px solid #D4AF37;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Print Styles */
+@media print {
+  .header,
+  .bottom-nav,
+  .hero-actions,
+  .services-actions,
+  .contact-actions {
+    display: none !important;
+  }
+  
+  .hero {
+    margin-top: 0 !important;
+  }
+  
+  * {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .service-card,
+  .testimonial-card {
+    border: 2px solid currentColor;
+  }
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Dark Mode Support (if needed) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #F8F8FF;
+    --background-color: #2F2F2F;
+  }
+  
+  /* Override only if client requests dark mode */
+}

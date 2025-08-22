@@ -1,2 +1,119 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/layout/_navigation.scss
 
+.navigation {
+  padding: spacing(4) 0;
+}
+
+.nav-container {
+  @include container;
+  @include flex-between;
+}
+
+.nav-brand {
+  .brand-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .brand-text {
+    font-family: $font-family-heading;
+    font-size: font-size(2xl);
+    font-weight: font-weight(bold);
+    color: color(primary);
+    line-height: 1;
+  }
+  
+  .brand-subtitle {
+    font-size: font-size(sm);
+    color: color(accent);
+    font-style: italic;
+    margin-top: spacing(1);
+  }
+}
+
+.nav-menu {
+  display: flex;
+  gap: spacing(8);
+  
+  .nav-link {
+    @include flex-center;
+    gap: spacing(2);
+    padding: spacing(3) spacing(4);
+    border-radius: border-radius(lg);
+    font-weight: font-weight(medium);
+    transition: all $transition-duration $transition-timing;
+    
+    &:hover, &.active {
+      background: color(accent-light);
+      color: color(primary);
+      
+      i {
+        transform: scale(1.1);
+      }
+    }
+    
+    i {
+      width: 20px;
+      height: 20px;
+      transition: transform $transition-duration $transition-timing;
+    }
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+// Bottom Navigation Mobile
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(color(background), 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid color(gray-200);
+  padding: spacing(2) 0 calc(spacing(2) + env(safe-area-inset-bottom));
+  z-index: z-index(fixed);
+  display: none;
+  
+  @include media-down(md) {
+    display: flex;
+  }
+}
+
+.bottom-nav-item {
+  flex: 1;
+  @include flex-center;
+  flex-direction: column;
+  gap: spacing(1);
+  padding: spacing(2);
+  color: color(gray-500);
+  font-size: font-size(xs);
+  font-weight: font-weight(medium);
+  transition: all $transition-duration $transition-timing;
+  
+  &.active {
+    color: color(primary);
+    
+    i {
+      transform: scale(1.2);
+    }
+  }
+  
+  &:hover {
+    color: color(accent);
+  }
+  
+  i {
+    width: 24px;
+    height: 24px;
+    transition: transform $transition-duration $transition-timing;
+  }
+  
+  span {
+    margin-top: spacing(1);
+  }
+}
+

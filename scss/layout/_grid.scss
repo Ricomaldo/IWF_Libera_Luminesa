@@ -1,2 +1,296 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/layout/_grid.scss
 
+// =============================================
+// BASE/_RESET.SCSS
+// =============================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-body;
+  font-size: font-size(base);
+  font-weight: font-weight(normal);
+  line-height: 1.6;
+  color: color(text);
+  background-color: color(background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// =============================================
+// BASE/_TYPOGRAPHY.SCSS
+// =============================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: font-weight(semibold);
+  line-height: 1.2;
+  color: color(text);
+  margin-bottom: spacing(4);
+}
+
+h1 {
+  font-size: font-size(4xl);
+  
+  @include media-up(md) {
+    font-size: font-size(5xl);
+  }
+  
+  @include media-up(lg) {
+    font-size: font-size(6xl);
+  }
+}
+
+h2 {
+  font-size: font-size(3xl);
+  
+  @include media-up(md) {
+    font-size: font-size(4xl);
+  }
+}
+
+h3 {
+  font-size: font-size(2xl);
+  
+  @include media-up(md) {
+    font-size: font-size(3xl);
+  }
+}
+
+h4 {
+  font-size: font-size(xl);
+  
+  @include media-up(md) {
+    font-size: font-size(2xl);
+  }
+}
+
+h5 {
+  font-size: font-size(lg);
+  
+  @include media-up(md) {
+    font-size: font-size(xl);
+  }
+}
+
+h6 {
+  font-size: font-size(base);
+  
+  @include media-up(md) {
+    font-size: font-size(lg);
+  }
+}
+
+p {
+  margin-bottom: spacing(4);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.intro-text {
+  font-size: font-size(lg);
+  font-weight: font-weight(medium);
+  color: color(primary);
+  
+  @include media-up(md) {
+    font-size: font-size(xl);
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: spacing(6);
+  
+  @include media-up(md) {
+    margin-bottom: spacing(8);
+  }
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: font-size(lg);
+  color: color(gray-600);
+  margin-bottom: spacing(12);
+}
+
+// =============================================
+// BASE/_UTILITIES.SCSS
+// =============================================
+
+.container {
+  @include container;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.sr-only {
+  @include visually-hidden;
+}
+
+// Spacing utilities
+@each $size, $value in $spacing {
+  .mt-#{$size} { margin-top: $value; }
+  .mb-#{$size} { margin-bottom: $value; }
+  .ml-#{$size} { margin-left: $value; }
+  .mr-#{$size} { margin-right: $value; }
+  .mx-#{$size} { margin-left: $value; margin-right: $value; }
+  .my-#{$size} { margin-top: $value; margin-bottom: $value; }
+  .m-#{$size} { margin: $value; }
+  
+  .pt-#{$size} { padding-top: $value; }
+  .pb-#{$size} { padding-bottom: $value; }
+  .pl-#{$size} { padding-left: $value; }
+  .pr-#{$size} { padding-right: $value; }
+  .px-#{$size} { padding-left: $value; padding-right: $value; }
+  .py-#{$size} { padding-top: $value; padding-bottom: $value; }
+  .p-#{$size} { padding: $value; }
+}
+
+// =============================================
+// LAYOUT/_GRID.SCSS
+// =============================================
+
+.grid {
+  display: grid;
+  gap: spacing(6);
+  
+  &.grid-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  &.grid-2 {
+    grid-template-columns: 1fr;
+    
+    @include media-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &.grid-3 {
+    grid-template-columns: 1fr;
+    
+    @include media-up(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include media-up(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &.grid-4 {
+    grid-template-columns: 1fr;
+    
+    @include media-up(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include media-up(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  &.gap-sm {
+    gap: spacing(4);
+  }
+  
+  &.gap-md {
+    gap: spacing(6);
+  }
+  
+  &.gap-lg {
+    gap: spacing(8);
+  }
+  
+  &.gap-xl {
+    gap: spacing(12);
+  }
+}
+
+.flex {
+  display: flex;
+  
+  &.flex-center {
+    @include flex-center;
+  }
+  
+  &.flex-between {
+    @include flex-between;
+  }
+  
+  &.flex-col {
+    flex-direction: column;
+  }
+  
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  &.gap-sm {
+    gap: spacing(2);
+  }
+  
+  &.gap-md {
+    gap: spacing(4);
+  }
+  
+  &.gap-lg {
+    gap: spacing(6);
+  }
+}

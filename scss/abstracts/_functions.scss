@@ -1,2 +1,39 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/abstracts/_functions.scss
 
+// =============================================
+// ABSTRACTS/_FUNCTIONS.SCSS
+// =============================================
+
+// Les fonctions sont déjà définies dans _variables.scss
+// Ce fichier peut contenir des fonctions supplémentaires
+
+// Fonction pour convertir px en rem
+@function rem($px, $base: 16px) {
+    @return ($px / $base) * 1rem;
+  }
+  
+  // Fonction pour créer des couleurs avec opacity
+  @function rgba-color($color-name, $opacity: 1) {
+    @return rgba(color($color-name), $opacity);
+  }
+  
+  // Fonction pour darkener/lighten les couleurs
+  @function color-variant($color-name, $variant: '') {
+    @if $variant == 'light' {
+      @return color($color-name + '-light');
+    } @else if $variant == 'dark' {
+      @return color($color-name + '-dark');
+    } @else {
+      @return color($color-name);
+    }
+  }
+  
+  // Fonction pour calculer le contraste
+  @function contrast-color($background-color) {
+    @if (lightness($background-color) > 50%) {
+      @return color(text); // Couleur sombre sur fond clair
+    } @else {
+      @return white; // Couleur claire sur fond sombre
+    }
+  }
+  

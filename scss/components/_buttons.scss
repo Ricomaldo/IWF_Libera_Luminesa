@@ -1,2 +1,37 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/components/_buttons.scss
 
+.btn {
+  @include btn-base;
+  
+  &.btn-primary {
+    @include btn-primary;
+  }
+  
+  &.btn-secondary {
+    @include btn-secondary;
+  }
+  
+  &.btn-outline {
+    @include btn-outline;
+  }
+  
+  // Tailles
+  &.btn-sm {
+    padding: spacing(2) spacing(4);
+    font-size: font-size(sm);
+    min-height: 36px;
+  }
+  
+  &.btn-lg {
+    padding: spacing(4) spacing(8);
+    font-size: font-size(lg);
+    min-height: 52px;
+  }
+  
+  // Pleine largeur
+  &.btn-full {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

@@ -1,2 +1,17 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/layout/_header.scss
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(color(background), 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid color(gray-200);
+  z-index: z-index(fixed);
+  
+  @include media-down(md) {
+    display: none; // Masqué sur mobile, bottom-nav utilisé
+  }
+}
+

@@ -1,2 +1,90 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/components/_hero.scss
 
+.hero {
+  @include section-spacing;
+  margin-top: 80px; // Espace pour header fixe
+  
+  @include media-down(md) {
+    margin-top: 0;
+    padding-top: spacing(12);
+  }
+}
+
+.hero-container {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(12);
+  align-items: center;
+  
+  @include media-up(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(16);
+  }
+}
+
+.hero-content {
+  text-align: center;
+  
+  @include media-up(lg) {
+    text-align: left;
+  }
+}
+
+.hero-title {
+  font-size: font-size(4xl);
+  margin-bottom: spacing(6);
+  
+  @include media-up(md) {
+    font-size: font-size(5xl);
+  }
+  
+  @include media-up(lg) {
+    font-size: font-size(6xl);
+  }
+}
+
+.hero-subtitle {
+  color: color(primary);
+  font-style: italic;
+}
+
+.hero-description {
+  font-size: font-size(lg);
+  color: color(gray-600);
+  margin-bottom: spacing(8);
+  line-height: 1.7;
+  
+  @include media-up(md) {
+    font-size: font-size(xl);
+  }
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(4);
+  
+  @include media-up(sm) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  @include media-up(lg) {
+    justify-content: flex-start;
+  }
+}
+
+.hero-image {
+  text-align: center;
+  
+  img {
+    border-radius: border-radius(2xl);
+    box-shadow: shadow(xl);
+    max-width: 400px;
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+  }
+}
+

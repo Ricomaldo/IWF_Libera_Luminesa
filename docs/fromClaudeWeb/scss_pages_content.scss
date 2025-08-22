@@ -1,0 +1,534 @@
+// =============================================
+// PAGES/_HOME.SCSS
+// =============================================
+
+.main-content {
+  min-height: 100vh;
+  padding-bottom: 80px; // Espace pour bottom nav mobile
+  
+  @include media-up(md) {
+    padding-bottom: 0;
+  }
+}
+
+// About Intro Section
+.about-intro {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(secondary), color(gray-50));
+}
+
+.about-content {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(12);
+  align-items: center;
+  
+  @include media-up(lg) {
+    grid-template-columns: 2fr 1fr;
+    gap: spacing(16);
+  }
+}
+
+.about-text {
+  p {
+    margin-bottom: spacing(6);
+    line-height: 1.7;
+    
+    &.intro-text {
+      font-size: font-size(2xl);
+      font-weight: font-weight(medium);
+      color: color(primary);
+      margin-bottom: spacing(8);
+    }
+  }
+  
+  strong {
+    color: color(primary);
+    font-weight: font-weight(semibold);
+  }
+}
+
+.about-image {
+  text-align: center;
+  
+  img {
+    border-radius: border-radius(xl);
+    box-shadow: shadow(lg);
+    max-width: 300px;
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+  }
+}
+
+.about-actions {
+  @include container;
+  text-align: center;
+  margin-top: spacing(12);
+}
+
+// Services Preview Section
+.services-preview {
+  @include section-spacing;
+}
+
+.services-grid {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(8);
+  margin-bottom: spacing(12);
+  
+  @include media-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include media-up(lg) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: spacing(10);
+  }
+}
+
+.services-actions {
+  @include container;
+  text-align: center;
+}
+
+// Contact Preview Section
+.contact-preview {
+  @include section-spacing;
+  background: color(gray-50);
+}
+
+.contact-grid {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(8);
+  
+  @include media-up(md) {
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(12);
+    align-items: center;
+  }
+}
+
+.contact-info {
+  h3 {
+    font-size: font-size(2xl);
+    color: color(primary);
+    margin-bottom: spacing(6);
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: spacing(3);
+  margin-bottom: spacing(4);
+  
+  i {
+    width: 20px;
+    height: 20px;
+    color: color(accent);
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  
+  div {
+    line-height: 1.5;
+  }
+  
+  a {
+    color: color(primary);
+    font-weight: font-weight(medium);
+    transition: color $transition-duration $transition-timing;
+    
+    &:hover {
+      color: color(accent);
+    }
+  }
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(4);
+  
+  @include media-up(sm) {
+    flex-direction: row;
+  }
+  
+  @include media-up(md) {
+    flex-direction: column;
+  }
+}
+
+// Testimonials Section
+.testimonials {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(accent-light), color(secondary));
+}
+
+.testimonials-grid {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(8);
+  
+  @include media-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include media-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial-card {
+  background: white;
+  padding: spacing(6);
+  border-radius: border-radius(xl);
+  box-shadow: shadow(sm);
+  position: relative;
+  
+  &::before {
+    content: '"';
+    position: absolute;
+    top: spacing(4);
+    left: spacing(4);
+    font-size: font-size(4xl);
+    color: color(accent-light);
+    font-family: $font-family-heading;
+    line-height: 1;
+  }
+  
+  .testimonial-text {
+    margin-top: spacing(4);
+    margin-bottom: spacing(4);
+    font-style: italic;
+    line-height: 1.6;
+    color: color(gray-700);
+  }
+  
+  .testimonial-author {
+    font-weight: font-weight(semibold);
+    color: color(primary);
+    font-size: font-size(sm);
+  }
+}
+
+// =============================================
+// PAGES/_SERVICES.SCSS
+// =============================================
+
+.services-hero {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(primary), color(primary-dark));
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+  
+  @include media-down(md) {
+    margin-top: 0;
+  }
+  
+  h1 {
+    color: white;
+    margin-bottom: spacing(4);
+  }
+  
+  .services-intro {
+    font-size: font-size(lg);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.service-detail {
+  @include section-spacing;
+  
+  &:nth-child(even) {
+    background: color(gray-50);
+  }
+}
+
+.service-detail-container {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(12);
+  
+  @include media-up(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(16);
+    align-items: center;
+  }
+}
+
+.service-content {
+  .service-category {
+    background: color(accent-light);
+    color: color(accent-dark);
+    padding: spacing(2) spacing(4);
+    border-radius: border-radius(full);
+    font-size: font-size(sm);
+    font-weight: font-weight(semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: spacing(4);
+  }
+  
+  h2 {
+    margin-bottom: spacing(6);
+  }
+  
+  .service-description {
+    margin-bottom: spacing(6);
+    line-height: 1.7;
+  }
+  
+  .service-benefits {
+    margin-bottom: spacing(8);
+    
+    h4 {
+      color: color(primary);
+      margin-bottom: spacing(3);
+    }
+    
+    ul {
+      list-style: none;
+      
+      li {
+        padding-left: spacing(6);
+        margin-bottom: spacing(2);
+        position: relative;
+        
+        &::before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          color: color(accent);
+          font-weight: font-weight(bold);
+        }
+      }
+    }
+  }
+}
+
+.service-meta {
+  background: white;
+  padding: spacing(6);
+  border-radius: border-radius(xl);
+  box-shadow: shadow(md);
+  
+  .service-price {
+    text-align: center;
+    margin-bottom: spacing(6);
+    
+    .price-amount {
+      font-size: font-size(3xl);
+      font-weight: font-weight(bold);
+      color: color(primary);
+      display: block;
+    }
+    
+    .price-duration {
+      color: color(gray-600);
+      font-size: font-size(sm);
+    }
+  }
+  
+  .service-info {
+    margin-bottom: spacing(6);
+    
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      padding: spacing(3) 0;
+      border-bottom: 1px solid color(gray-200);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      .label {
+        font-weight: font-weight(medium);
+        color: color(gray-700);
+      }
+      
+      .value {
+        color: color(primary);
+        font-weight: font-weight(semibold);
+      }
+    }
+  }
+  
+  .service-actions {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(3);
+  }
+}
+
+// =============================================
+// PAGES/_ABOUT.SCSS
+// =============================================
+
+.about-hero {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(accent), color(accent-dark));
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+  
+  @include media-down(md) {
+    margin-top: 0;
+  }
+  
+  h1 {
+    color: white;
+    margin-bottom: spacing(4);
+  }
+}
+
+.journey-section {
+  @include section-spacing;
+}
+
+.journey-content {
+  @include container;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  
+  .journey-text {
+    font-size: font-size(lg);
+    line-height: 1.8;
+    margin-bottom: spacing(8);
+  }
+}
+
+.formations-section {
+  @include section-spacing;
+  background: color(gray-50);
+}
+
+.formations-grid {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(6);
+  
+  @include media-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.formation-card {
+  background: white;
+  padding: spacing(6);
+  border-radius: border-radius(lg);
+  box-shadow: shadow(sm);
+  border-left: 4px solid color(primary);
+  
+  .formation-year {
+    background: color(primary);
+    color: white;
+    padding: spacing(1) spacing(3);
+    border-radius: border-radius(full);
+    font-size: font-size(sm);
+    font-weight: font-weight(semibold);
+    display: inline-block;
+    margin-bottom: spacing(3);
+  }
+  
+  .formation-title {
+    font-size: font-size(lg);
+    font-weight: font-weight(semibold);
+    color: color(text);
+    margin-bottom: spacing(2);
+  }
+  
+  .formation-school {
+    color: color(gray-600);
+    font-size: font-size(sm);
+  }
+}
+
+// =============================================
+// PAGES/_CONTACT.SCSS
+// =============================================
+
+.contact-hero {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(secondary), color(accent-light));
+  text-align: center;
+  margin-top: 80px;
+  
+  @include media-down(md) {
+    margin-top: 0;
+  }
+}
+
+.contact-main {
+  @include section-spacing;
+}
+
+.contact-container {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(12);
+  
+  @include media-up(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(16);
+  }
+}
+
+.contact-form-section {
+  .form-group {
+    margin-bottom: spacing(6);
+    
+    label {
+      display: block;
+      font-weight: font-weight(medium);
+      color: color(text);
+      margin-bottom: spacing(2);
+    }
+    
+    input,
+    textarea {
+      width: 100%;
+      padding: spacing(4);
+      border: 2px solid color(gray-200);
+      border-radius: border-radius(lg);
+      font-size: font-size(base);
+      transition: border-color $transition-duration $transition-timing;
+      
+      &:focus {
+        outline: none;
+        border-color: color(primary);
+        box-shadow: 0 0 0 3px rgba(color(primary), 0.1);
+      }
+    }
+    
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+  }
+}
+
+.contact-info-section {
+  .info-card {
+    background: color(gray-50);
+    padding: spacing(8);
+    border-radius: border-radius(xl);
+    margin-bottom: spacing(8);
+  }
+}

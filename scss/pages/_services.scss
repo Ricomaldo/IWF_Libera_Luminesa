@@ -1,2 +1,153 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/pages/_services.scss
 
+.services-hero {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(primary), color(primary-dark));
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+  
+  @include media-down(md) {
+    margin-top: 0;
+  }
+  
+  h1 {
+    color: white;
+    margin-bottom: spacing(4);
+  }
+  
+  .services-intro {
+    font-size: font-size(lg);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.service-detail {
+  @include section-spacing;
+  
+  &:nth-child(even) {
+    background: color(gray-50);
+  }
+}
+
+.service-detail-container {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(12);
+  
+  @include media-up(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(16);
+    align-items: center;
+  }
+}
+
+.service-content {
+  .service-category {
+    background: color(accent-light);
+    color: color(accent-dark);
+    padding: spacing(2) spacing(4);
+    border-radius: border-radius(full);
+    font-size: font-size(sm);
+    font-weight: font-weight(semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: spacing(4);
+  }
+  
+  h2 {
+    margin-bottom: spacing(6);
+  }
+  
+  .service-description {
+    margin-bottom: spacing(6);
+    line-height: 1.7;
+  }
+  
+  .service-benefits {
+    margin-bottom: spacing(8);
+    
+    h4 {
+      color: color(primary);
+      margin-bottom: spacing(3);
+    }
+    
+    ul {
+      list-style: none;
+      
+      li {
+        padding-left: spacing(6);
+        margin-bottom: spacing(2);
+        position: relative;
+        
+        &::before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          color: color(accent);
+          font-weight: font-weight(bold);
+        }
+      }
+    }
+  }
+}
+
+.service-meta {
+  background: white;
+  padding: spacing(6);
+  border-radius: border-radius(xl);
+  box-shadow: shadow(md);
+  
+  .service-price {
+    text-align: center;
+    margin-bottom: spacing(6);
+    
+    .price-amount {
+      font-size: font-size(3xl);
+      font-weight: font-weight(bold);
+      color: color(primary);
+      display: block;
+    }
+    
+    .price-duration {
+      color: color(gray-600);
+      font-size: font-size(sm);
+    }
+  }
+  
+  .service-info {
+    margin-bottom: spacing(6);
+    
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      padding: spacing(3) 0;
+      border-bottom: 1px solid color(gray-200);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      .label {
+        font-weight: font-weight(medium);
+        color: color(gray-700);
+      }
+      
+      .value {
+        color: color(primary);
+        font-weight: font-weight(semibold);
+      }
+    }
+  }
+  
+  .service-actions {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(3);
+  }
+}
+

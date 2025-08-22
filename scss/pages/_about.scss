@@ -1,2 +1,83 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/pages/_about.scss
 
+.about-hero {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(accent), color(accent-dark));
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+  
+  @include media-down(md) {
+    margin-top: 0;
+  }
+  
+  h1 {
+    color: white;
+    margin-bottom: spacing(4);
+  }
+}
+
+.journey-section {
+  @include section-spacing;
+}
+
+.journey-content {
+  @include container;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  
+  .journey-text {
+    font-size: font-size(lg);
+    line-height: 1.8;
+    margin-bottom: spacing(8);
+  }
+}
+
+.formations-section {
+  @include section-spacing;
+  background: color(gray-50);
+}
+
+.formations-grid {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(6);
+  
+  @include media-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.formation-card {
+  background: white;
+  padding: spacing(6);
+  border-radius: border-radius(lg);
+  box-shadow: shadow(sm);
+  border-left: 4px solid color(primary);
+  
+  .formation-year {
+    background: color(primary);
+    color: white;
+    padding: spacing(1) spacing(3);
+    border-radius: border-radius(full);
+    font-size: font-size(sm);
+    font-weight: font-weight(semibold);
+    display: inline-block;
+    margin-bottom: spacing(3);
+  }
+  
+  .formation-title {
+    font-size: font-size(lg);
+    font-weight: font-weight(semibold);
+    color: color(text);
+    margin-bottom: spacing(2);
+  }
+  
+  .formation-school {
+    color: color(gray-600);
+    font-size: font-size(sm);
+  }
+}
+

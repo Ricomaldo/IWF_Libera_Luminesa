@@ -1,2 +1,82 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/components/_cards.scss
 
+.service-card {
+  @include card-base;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, color(primary), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  &:hover::before {
+    left: 100%;
+  }
+}
+
+.service-icon {
+  @include flex-center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, color(accent-light), color(accent));
+  border-radius: border-radius(full);
+  margin: 0 auto spacing(6);
+  
+  i {
+    width: 32px;
+    height: 32px;
+    color: color(accent-dark);
+  }
+}
+
+.service-title {
+  font-size: font-size(xl);
+  margin-bottom: spacing(2);
+  color: color(text);
+}
+
+.service-subtitle {
+  font-size: font-size(sm);
+  color: color(primary);
+  font-weight: font-weight(semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: spacing(4);
+}
+
+.service-description {
+  color: color(gray-600);
+  margin-bottom: spacing(6);
+  line-height: 1.6;
+}
+
+.service-link {
+  @include flex-center;
+  gap: spacing(2);
+  color: color(primary);
+  font-weight: font-weight(medium);
+  transition: all $transition-duration $transition-timing;
+  
+  &:hover {
+    gap: spacing(3);
+    
+    i {
+      transform: translateX(4px);
+    }
+  }
+  
+  i {
+    width: 16px;
+    height: 16px;
+    transition: transform $transition-duration $transition-timing;
+  }
+}
+

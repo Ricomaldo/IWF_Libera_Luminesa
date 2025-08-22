@@ -1,2 +1,72 @@
 // /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/pages/_contact.scss
 
+.contact-hero {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(secondary), color(accent-light));
+  text-align: center;
+  margin-top: 80px;
+  
+  @include media-down(md) {
+    margin-top: 0;
+  }
+}
+
+.contact-main {
+  @include section-spacing;
+}
+
+.contact-container {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(12);
+  
+  @include media-up(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(16);
+  }
+}
+
+.contact-form-section {
+  .form-group {
+    margin-bottom: spacing(6);
+    
+    label {
+      display: block;
+      font-weight: font-weight(medium);
+      color: color(text);
+      margin-bottom: spacing(2);
+    }
+    
+    input,
+    textarea {
+      width: 100%;
+      padding: spacing(4);
+      border: 2px solid color(gray-200);
+      border-radius: border-radius(lg);
+      font-size: font-size(base);
+      transition: border-color $transition-duration $transition-timing;
+      
+      &:focus {
+        outline: none;
+        border-color: color(primary);
+        box-shadow: 0 0 0 3px rgba(color(primary), 0.1);
+      }
+    }
+    
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+  }
+}
+
+.contact-info-section {
+  .info-card {
+    background: color(gray-50);
+    padding: spacing(8);
+    border-radius: border-radius(xl);
+    margin-bottom: spacing(8);
+  }
+}
+
