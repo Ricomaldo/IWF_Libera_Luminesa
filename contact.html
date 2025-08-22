@@ -8,13 +8,26 @@
     <meta name="description" content="Contactez Séverine Kohler pour vos séances d'olfactothérapie, olfactocoaching et réflexologie. Cabinet à Aspach-le-Bas, Haut-Rhin.">
     <meta name="keywords" content="contact, rendez-vous, séverine kohler, aspach-le-bas, olfactothérapie, réflexologie">
     <title>Contact - Libera Luminosa | Séverine Kohler</title>
+    <link rel="canonical" href="https://liberaluminosa.fr/contact.html">
+    <link rel="icon" href="assets/images/icons/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Libera Luminosa">
+    <meta property="og:title" content="Contact - Libera Luminosa">
+    <meta property="og:description" content="Prenez contact avec Séverine Kohler à Aspach-le-Bas pour vos accompagnements.">
+    <meta property="og:url" content="https://liberaluminosa.fr/contact.html">
+    <meta property="og:image" content="https://liberaluminosa.fr/assets/images/severine/salle_zen.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Libera Luminosa">
+    <meta name="twitter:description" content="Je vous réponds sous 24h.">
+    <meta name="twitter:image" content="https://liberaluminosa.fr/assets/images/severine/salle_zen.jpeg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 </head>
 <body>
     <!-- Header avec Navigation Desktop -->
@@ -43,7 +56,7 @@
                     </li>
                     <li role="none">
                         <a href="mon-parcours.html" class="nav-link" role="menuitem">
-                            <i data-lucide="user-heart"></i>
+                            <i data-lucide="user"></i>
                             <span>Mon parcours</span>
                         </a>
                     </li>
@@ -66,13 +79,13 @@
         </a>
         <a href="mes-accompagnements.html" class="bottom-nav-item">
             <i data-lucide="heart-handshake"></i>
-            <span>Services</span>
+            <span>Accompagnements</span>
         </a>
         <a href="mon-parcours.html" class="bottom-nav-item">
-            <i data-lucide="user-heart"></i>
+            <i data-lucide="user"></i>
             <span>Parcours</span>
         </a>
-        <a href="contact.html" class="bottom-nav-item active">
+        <a href="contact.html" class="bottom-nav-item">
             <i data-lucide="message-circle-heart"></i>
             <span>Contact</span>
         </a>
@@ -98,7 +111,7 @@
                         Utilisez ce formulaire pour me poser vos questions ou prendre rendez-vous. Je vous réponds dans les 24h.
                     </p>
                     
-                    <form class="contact-form" action="#" method="POST">
+                    <form class="contact-form" action="https://formspree.io/f/xdkdqdav" method="POST">
                         <div class="form-group">
                             <label for="nom" class="required">Nom et Prénom</label>
                             <input type="text" id="nom" name="nom" required aria-describedby="nom-hint">
@@ -139,13 +152,9 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="checkbox">
-                                <input type="checkbox" id="confidentialite" name="confidentialite" required>
-                                <label for="confidentialite">
-                                    J'accepte que mes données soient utilisées pour répondre à ma demande de contact. 
-                                    <a href="mentions-legales.html" target="_blank">Voir la politique de confidentialité</a>
-                                </label>
-                            </div>
+                            <input type="hidden" name="_subject" value="Nouveau message depuis Libera Luminosa">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_redirect" value="https://liberaluminosa.fr/contact.html?sent=1">
                         </div>
 
                         <div class="form-group">
@@ -275,7 +284,7 @@
                             </a>
                             <a href="mes-accompagnements.html" class="btn btn-outline">
                                 <i data-lucide="heart-handshake"></i>
-                                Voir mes services
+                                Voir mes accompagnements
                             </a>
                         </div>
                     </div>
@@ -283,25 +292,45 @@
             </div>
         </section>
 
-        <!-- Carte Google Maps -->
+        <!-- Carte Google Maps (click-to-load) -->
         <section class="map-section">
             <div class="container">
                 <h2 class="section-title">Localisation du cabinet</h2>
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.8395916665855!2d7.117901776325895!3d47.658061971812654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c55e3c8a8a8b%3A0x8e99e3e1c5b3c3c3!2s30%20Rue%20de%20la%20Station%2C%2068700%20Aspach-le-Bas!5e0!3m2!1sfr!2sfr!4v1692345678901!5m2!1sfr!2sfr"
-                        width="100%" 
-                        height="400" 
-                        style="border: 0; border-radius: 1rem;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Localisation du cabinet Libera Luminosa à Aspach-le-Bas">
-                    </iframe>
+                <div class="map-container" data-map-container>
+                    <div style="display:flex;align-items:center;justify-content:center;height:400px;background:#E5E5E5;border-radius:1rem;">
+                        <button class="btn btn-primary js-load-map" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.8395916665855!2d7.117901776325895!3d47.658061971812654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c55e3c8a8a8b%3A0x8e99e3e1c5b3c3c3!2s30%20Rue%20de%20la%20Station%2C%2068700%20Aspach-le-Bas!5e0!3m2!1sfr!2sfr!4v1692345678901!5m2!1sfr!2sfr">Afficher la carte</button>
+                    </div>
                 </div>
                 <p style="text-align: center; margin-top: 1rem; color: #737373;">
                     30 rue de la Station, 68700 Aspach-le-Bas - Parking gratuit disponible
                 </p>
+            </div>
+        </section>
+
+        <!-- FAQ Contact -->
+        <section class="contact-main" aria-labelledby="faq-title">
+            <div class="contact-container">
+                <div class="info-card">
+                    <h2 id="faq-title" class="section-title">Questions fréquentes</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <details>
+                            <summary style="font-weight:600;color:#2F2F2F;">Comment prendre rendez-vous ?</summary>
+                            <div style="margin-top:0.5rem;color:#525252;">Via le <a href="contact.html">formulaire de contact</a> ou par téléphone au <a href="tel:0651808436">06 51 80 84 36</a>. Je vous réponds sous 24h.</div>
+                        </details>
+                        <details>
+                            <summary style="font-weight:600;color:#2F2F2F;">Délais de réponse</summary>
+                            <div style="margin-top:0.5rem;color:#525252;">Sous 24h ouvrées. En cas d’urgence, privilégiez l’appel téléphonique.</div>
+                        </details>
+                        <details>
+                            <summary style="font-weight:600;color:#2F2F2F;">Politique d’annulation</summary>
+                            <div style="margin-top:0.5rem;color:#525252;">Merci de prévenir au moins 24h à l’avance. Les séances non annulées sont dues.</div>
+                        </details>
+                        <details>
+                            <summary style="font-weight:600;color:#2F2F2F;">Première séance</summary>
+                            <div style="margin-top:0.5rem;color:#525252;">Nous faisons un point sur vos besoins pour définir l’accompagnement le plus adapté (durée 30 min à 2h selon la méthode).</div>
+                        </details>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -317,7 +346,7 @@
             <div class="footer-links">
                 <a href="mentions-legales.html">Mentions légales</a>
                 <a href="mon-parcours.html">Mon parcours</a>
-                <a href="mes-accompagnements.html">Mes services</a>
+                <a href="mes-accompagnements.html">Mes accompagnements</a>
             </div>
             <div class="footer-social">
                 <a href="https://www.facebook.com/p/Lib%C3%A9ra-Luminosa-100087633376582/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Libera Luminosa">
@@ -334,42 +363,47 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-        
-        // Navigation mobile active state
-        const navItems = document.querySelectorAll('.bottom-nav-item');
-        navItems.forEach(item => {
-            if (item.getAttribute('href') === 'contact.html') {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
-        });
+    <script src="js/main.js" defer></script>
 
-        // Formulaire de contact
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validation simple
-            const nom = document.getElementById('nom').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            const confidentialite = document.getElementById('confidentialite').checked;
-            
-            if (!nom || !email || !message || !confidentialite) {
-                alert('Veuillez remplir tous les champs obligatoires et accepter la politique de confidentialité.');
-                return;
-            }
-            
-            // Simulation d'envoi (à remplacer par une vraie fonction d'envoi)
-            const formData = new FormData(this);
-            
-            // Redirection vers mailto en attendant la mise en place d'un backend
-            const mailtoLink = `mailto:severinekohler80@gmail.com?subject=Contact depuis le site - ${nom}&body=Nom: ${nom}%0D%0AEmail: ${email}%0D%0ATéléphone: ${formData.get('telephone') || 'Non renseigné'}%0D%0AService: ${formData.get('service') || 'Non spécifié'}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-            
-            window.location.href = mailtoLink;
-        });
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment prendre rendez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Via le formulaire de contact du site ou par téléphone au 06 51 80 84 36. Réponse sous 24h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels sont les délais de réponse ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je réponds à vos messages sous 24h ouvrées. En cas d’urgence, privilégiez l’appel téléphonique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la politique d’annulation ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Merci de prévenir au moins 24h à l’avance. Les séances non annulées sont dues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se déroule la première séance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous faisons un point sur vos besoins et définissons l’accompagnement le plus adapté. La durée varie de 30 minutes à 2 heures selon la méthode choisie."
+          }
+        }
+      ]
+    }
     </script>
 
     <style>

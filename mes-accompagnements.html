@@ -8,13 +8,26 @@
     <meta name="description" content="Découvrez mes accompagnements thérapeutiques : Olfactothérapie, Olfactocoaching, Réflexologie et Aromatouch. Séances personnalisées à Aspach-le-Bas.">
     <meta name="keywords" content="olfactothérapie, olfactocoaching, réflexologie, aromatouch, doterra, gilles fournil, thérapie, bien-être">
     <title>Mes Accompagnements - Libera Luminosa | Séverine Kohler</title>
+    <link rel="canonical" href="https://liberaluminosa.fr/mes-accompagnements.html">
+    <link rel="icon" href="assets/images/icons/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Libera Luminosa">
+    <meta property="og:title" content="Mes Accompagnements - Libera Luminosa">
+    <meta property="og:description" content="Olfactothérapie, Olfactocoaching, Évasion olfactive, Aromatouch & Réflexologie, Exhalessence.">
+    <meta property="og:url" content="https://liberaluminosa.fr/mes-accompagnements.html">
+    <meta property="og:image" content="https://liberaluminosa.fr/assets/images/severine/salle_zen.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mes Accompagnements - Libera Luminosa">
+    <meta name="twitter:description" content="Découvrez cinq chemins sensoriels vers votre épanouissement.">
+    <meta name="twitter:image" content="https://liberaluminosa.fr/assets/images/severine/salle_zen.jpeg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 </head>
 <body>
     <!-- Header avec Navigation Desktop -->
@@ -43,7 +56,7 @@
                     </li>
                     <li role="none">
                         <a href="mon-parcours.html" class="nav-link" role="menuitem">
-                            <i data-lucide="user-heart"></i>
+                            <i data-lucide="user"></i>
                             <span>Mon parcours</span>
                         </a>
                     </li>
@@ -64,12 +77,12 @@
             <i data-lucide="home"></i>
             <span>Univers</span>
         </a>
-        <a href="mes-accompagnements.html" class="bottom-nav-item active">
+        <a href="mes-accompagnements.html" class="bottom-nav-item">
             <i data-lucide="heart-handshake"></i>
-            <span>Services</span>
+            <span>Accompagnements</span>
         </a>
         <a href="mon-parcours.html" class="bottom-nav-item">
-            <i data-lucide="user-heart"></i>
+            <i data-lucide="user"></i>
             <span>Parcours</span>
         </a>
         <a href="contact.html" class="bottom-nav-item">
@@ -80,11 +93,11 @@
 
     <!-- Contenu Principal -->
     <main class="main-content" role="main">
-        <!-- Services Hero -->
-        <section class="services-hero" aria-labelledby="services-hero-title">
+        <!-- Accompagnements Hero -->
+        <section class="accompagnements-hero" aria-labelledby="accompagnements-hero-title">
             <div class="container">
-                <h1 id="services-hero-title">Mes Accompagnements</h1>
-                <p class="services-intro">Cinq chemins sensoriels vers votre épanouissement personnel, chacun adapté à vos besoins spécifiques.</p>
+                <h1 id="accompagnements-hero-title">Mes Accompagnements</h1>
+                <p class="accompagnements-intro">Cinq chemins sensoriels vers votre épanouissement personnel, chacun adapté à vos besoins spécifiques.</p>
             </div>
         </section>
 
@@ -226,7 +239,7 @@
                 <div class="service-image">
                     <img src="assets/images/severine/salle_zen.jpeg" 
                          alt="Espace zen de méditation avec bougies et troncs de bouleau" 
-                         loading="lazy">
+                         loading="lazy" decoding="async">
                 </div>
                 <div class="service-meta">
                     <div class="service-price">
@@ -317,7 +330,7 @@
                 <div class="service-image">
                     <img src="assets/images/severine/diffuseur_huiles_essentielles_doterra.jpeg" 
                          alt="Diffuseur d'huiles essentielles doTERRA avec fleurs blanches" 
-                         loading="lazy">
+                         loading="lazy" decoding="async">
                 </div>
                 <div class="service-meta">
                     <div class="service-price">
@@ -440,7 +453,7 @@
             <div class="footer-links">
                 <a href="mentions-legales.html">Mentions légales</a>
                 <a href="mon-parcours.html">Mon parcours</a>
-                <a href="mes-accompagnements.html">Mes services</a>
+                <a href="mes-accompagnements.html">Mes accompagnements</a>
             </div>
             <div class="footer-social">
                 <a href="https://www.facebook.com/p/Lib%C3%A9ra-Luminosa-100087633376582/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Libera Luminosa">
@@ -457,19 +470,7 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-        
-        // Navigation mobile active state
-        const navItems = document.querySelectorAll('.bottom-nav-item');
-        navItems.forEach(item => {
-            if (item.getAttribute('href') === 'mes-accompagnements.html') {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 
     <style>
     .service-tarifs {
@@ -514,5 +515,132 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FAQPage",
+          "@id": "https://liberaluminosa.fr/mes-accompagnements.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Où se déroulent les séances ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Au cabinet : 30 rue de la Station, 68700 Aspach-le-Bas (parking gratuit). Certaines expériences (ex. Exhalessence) peuvent se faire à domicile."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels sont les tarifs ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Olfactothérapie 70€ (1h30) · Olfactocoaching 80€ (1h30–2h) · Évasion olfactive 55€ (1h) · Aromatouch 70€/40€ (1h/30min) · Réflexologie 65–75€ (1h à 1h30)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien de temps dure une séance ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Selon l’accompagnement : 30 minutes à 2 heures. L’Olfactothérapie dure 1h30, l’Olfactocoaching 1h30 à 2h, l’Évasion 1h, Aromatouch 30min à 1h, Réflexologie 1h à 1h30."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment prendre rendez-vous ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Via le formulaire de la page Contact ou par téléphone au 06 51 80 84 36. Réponse sous 24h."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ces pratiques remplacent-elles un avis médical ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non. Ce sont des pratiques de bien-être et d’accompagnement personnel, qui ne se substituent pas à un avis médical ni à un traitement."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://liberaluminosa.fr/#business",
+          "name": "Libera Luminosa - Harmonie de l'Être",
+          "url": "https://liberaluminosa.fr/",
+          "telephone": "+33651808436",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "30 rue de la Station",
+            "addressLocality": "Aspach-le-Bas",
+            "postalCode": "68700",
+            "addressCountry": "FR"
+          },
+          "areaServed": "Haut-Rhin, Alsace"
+        },
+        {
+          "@type": "Service",
+          "name": "Olfactothérapie Aspach-le-Bas",
+          "serviceType": "Olfactothérapie",
+          "provider": { "@id": "https://liberaluminosa.fr/#business" },
+          "areaServed": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Aspach-le-Bas",
+              "postalCode": "68700",
+              "addressCountry": "FR"
+            }
+          },
+          "url": "https://liberaluminosa.fr/mes-accompagnements.html#olfactotherapie",
+          "offers": {
+            "@type": "Offer",
+            "price": "70",
+            "priceCurrency": "EUR",
+            "description": "Séance individuelle 1h30"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Réflexologie 68700",
+          "serviceType": "Réflexologie pluridisciplinaire",
+          "provider": { "@id": "https://liberaluminosa.fr/#business" },
+          "areaServed": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Aspach-le-Bas",
+              "postalCode": "68700",
+              "addressCountry": "FR"
+            }
+          },
+          "url": "https://liberaluminosa.fr/mes-accompagnements.html#harmonie",
+          "offers": [
+            { "@type": "Offer", "name": "Réflexologie plantaire", "price": "75", "priceCurrency": "EUR", "description": "1h30" },
+            { "@type": "Offer", "name": "Réflexologie palmaire", "price": "65", "priceCurrency": "EUR", "description": "1h" },
+            { "@type": "Offer", "name": "Réflexologie faciale/crânienne", "price": "65", "priceCurrency": "EUR", "description": "1h" }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Aromathérapie Thann",
+          "serviceType": "Aromathérapie - Technique Aromatouch (doTERRA)",
+          "provider": { "@id": "https://liberaluminosa.fr/#business" },
+          "areaServed": {
+            "@type": "Place",
+            "address": { "@type": "PostalAddress", "addressLocality": "Thann", "addressCountry": "FR" }
+          },
+          "url": "https://liberaluminosa.fr/mes-accompagnements.html#harmonie",
+          "offers": [
+            { "@type": "Offer", "name": "Aromatouch (dos, nuque, pieds)", "price": "70", "priceCurrency": "EUR", "description": "1h" },
+            { "@type": "Offer", "name": "Aromatouch mains", "price": "40", "priceCurrency": "EUR", "description": "30min" }
+          ]
+        }
+      ]
+    }
+    </script>
 </body>
 </html>
