@@ -127,16 +127,41 @@
   function initContactForm() {
     var form = document.querySelector('.contact-form');
     if (!form) return;
-    // Affiche un message de confirmation si redirection Formspree avec sent=1
-    var url = new URL(window.location.href);
-    if (url.searchParams.get('sent') === '1') {
-      form.innerHTML = '<div style="text-align:center;padding:2rem;background:#F8F8FF;border-radius:12px;">' +
-        '<h3 style="color:#D4AF37;margin-bottom:0.5rem;">✨ Message envoyé !</h3>' +
-        '<p>Merci ! Séverine vous répondra rapidement.</p>' +
-        '</div>';
-      return;
+    // Validation temps réel email
+    var emailInput = document.getElementById('email');
+    if (emailInput) {
+      emailInput.addEventListener('input', function () {
+        var val = emailInput.value.trim();
+        var isValid = /[^@\s]+@[^@\s]+\.[^@\s]+/.test(val);
+        emailInput.style.borderColor = isValid || val === '' ? '#E5E5E5' : '#EF4444';
+      });
     }
-    // Laisse Formspree gérer la soumission (pas d’AJAX)
+    // Compteur caractères message
+    var messageInput = document.getElementById('message');
+    if (messageInput) {
+      var counter = document.createElement('div');
+      counter.style.textAlign = 'right';
+      counter.style.fontSize = '0.85rem';
+      counter.style.color = '#737373';
+      messageInput.parentElement.appendChild(counter);
+      var max = 1000;
+      function updateCount() {
+        var len = (messageInput.value || '').length;
+        counter.textContent = len + ' / ' + max;
+        if (len > max) counter.style.color = '#EF4444'; else counter.style.color = '#737373';
+      }
+      messageInput.addEventListener('input', updateCount);
+      updateCount();
+    }
+    // Loading state bouton submit
+    form.addEventListener('submit', function () {
+      var submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i data-lucide="loader-2"></i> Envoi…';
+        if (window.lucide) window.lucide.createIcons();
+      }
+    });
   }
 
   onReady(function () {
