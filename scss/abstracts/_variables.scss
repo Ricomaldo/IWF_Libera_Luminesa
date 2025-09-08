@@ -80,8 +80,10 @@ $colors: (
 );
 
 // Fonction pour récupérer les couleurs
+@use 'sass:map';
+
 @function color($name) {
-  @return map-get($colors, $name);
+  @return map.get($colors, $name);
 }
 
 // Typographie
@@ -103,7 +105,7 @@ $font-sizes: (
 );
 
 @function font-size($size) {
-  @return map-get($font-sizes, $size);
+  @return map.get($font-sizes, $size);
 }
 
 // Poids de police
@@ -116,7 +118,7 @@ $font-weights: (
 );
 
 @function font-weight($weight) {
-  @return map-get($font-weights, $weight);
+  @return map.get($font-weights, $weight);
 }
 
 // Espacements
@@ -138,7 +140,7 @@ $spacing: (
 );
 
 @function spacing($size) {
-  @return map-get($spacing, $size);
+  @return map.get($spacing, $size);
 }
 
 // Breakpoints - Mobile First
@@ -151,7 +153,7 @@ $breakpoints: (
 );
 
 @function breakpoint($size) {
-  @return map-get($breakpoints, $size);
+  @return map.get($breakpoints, $size);
 }
 
 // Borders
@@ -166,7 +168,7 @@ $border-radius: (
 );
 
 @function border-radius($size) {
-  @return map-get($border-radius, $size);
+  @return map.get($border-radius, $size);
 }
 
 // Shadows
@@ -180,7 +182,7 @@ $shadows: (
 );
 
 @function shadow($size) {
-  @return map-get($shadows, $size);
+  @return map.get($shadows, $size);
 }
 
 // Z-index
@@ -195,7 +197,7 @@ $z-index: (
 );
 
 @function z-index($layer) {
-  @return map-get($z-index, $layer);
+  @return map.get($z-index, $layer);
 }
 
 // Transitions

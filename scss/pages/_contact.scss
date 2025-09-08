@@ -2,16 +2,19 @@
 
 .contact-hero {
   @include section-spacing;
-  background: linear-gradient(135deg, color(hero-primary-bg), color(hero-accent-bg));
-  text-align: center;
-  margin-top: 80px;
+  
+  & {
+    background: linear-gradient(135deg, color(hero-primary-bg), color(hero-accent-bg));
+    text-align: center;
+    margin-top: 80px;
+  }
   
   @include media-down(md) {
     margin-top: 0;
   }
   
   h1 {
-    color: white;
+    color: color(text);
     margin-bottom: spacing(4);
   }
 }
@@ -22,9 +25,12 @@
 
 .contact-container {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(12);
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(12);
+  }
   
   @include media-up(lg) {
     grid-template-columns: 1fr 1fr;

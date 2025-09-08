@@ -13,10 +13,13 @@
 
 .footer-content {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(8);
-  text-align: center;
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(8);
+    text-align: center;
+  }
   
   @include media-up(md) {
     grid-template-columns: 2fr 1fr 1fr;
@@ -95,12 +98,15 @@
 
 .footer-bottom {
   @include container;
-  margin-top: spacing(8);
-  padding-top: spacing(6);
-  border-top: 1px solid color(gray-200);
-  text-align: center;
-  font-size: font-size(sm);
-  color: color(gray-500);
+  
+  & {
+    margin-top: spacing(8);
+    padding-top: spacing(6);
+    border-top: 1px solid color(gray-200);
+    text-align: center;
+    font-size: font-size(sm);
+    color: color(gray-500);
+  }
   
   @include media-up(md) {
     display: flex;

@@ -2,17 +2,20 @@
 
 .accompagnements-hero {
   @include section-spacing;
-  background: linear-gradient(135deg, color(button-primary-start), color(button-primary-end));
-  color: white;
-  text-align: center;
-  margin-top: 80px;
+  
+  & {
+    background: linear-gradient(135deg, color(button-primary-start), color(button-primary-end));
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+  }
   
   @include media-down(md) {
     margin-top: 0;
   }
   
   h1 {
-    color: white;
+    color: color(text);
     margin-bottom: spacing(4);
   }
   
@@ -34,13 +37,22 @@
 
 .service-detail-container {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "image"
-    "content"
-    "meta";
-  gap: spacing(12);
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "content"
+      "meta";
+    gap: spacing(4);
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  @include media-up(md) {
+    gap: spacing(6);
+  }
   
   @include media-up(lg) {
     grid-template-columns: 1fr 1fr;
@@ -59,6 +71,11 @@
 .service-quote { grid-area: quote; }
 
 .service-content {
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  
   .service-category {
     position: relative;
     color: color(primary-text);
@@ -69,6 +86,13 @@
     letter-spacing: 0.8px;
     margin-bottom: spacing(3);
     padding-left: spacing(6);
+    word-wrap: break-word;
+    
+    @include media-down(sm) {
+      font-size: font-size(xs);
+      letter-spacing: 0.5px;
+      padding-left: spacing(5);
+    }
     
     // Icône décorative élégante avant le texte
     &::before {
@@ -82,6 +106,11 @@
       background: radial-gradient(circle, color(bronze), color(bronze-dark));
       border-radius: border-radius(full);
       opacity: 0.7;
+      
+      @include media-down(sm) {
+        width: 14px;
+        height: 14px;
+      }
     }
     
     // Point décoratif supplémentaire
@@ -95,6 +124,12 @@
       height: 8px;
       background: color(hero-primary-bg);
       border-radius: border-radius(full);
+      
+      @include media-down(sm) {
+        left: 3px;
+        width: 6px;
+        height: 6px;
+      }
     }
   }
   
@@ -154,19 +189,33 @@
 
 .service-meta {
   background: white;
-  padding: spacing(6);
+  padding: spacing(4);
   border-radius: border-radius(xl);
   box-shadow: shadow(md);
+  width: 100%;
+  box-sizing: border-box;
+  
+  @include media-up(md) {
+    padding: spacing(6);
+  }
   
   .service-price {
     text-align: center;
-    margin-bottom: spacing(6);
+    margin-bottom: spacing(4);
+    
+    @include media-up(md) {
+      margin-bottom: spacing(6);
+    }
     
     .price-amount {
-      font-size: font-size(3xl);
+      font-size: font-size(2xl);
       font-weight: font-weight(bold);
       color: color(price-primary);
       display: block;
+      
+      @include media-up(md) {
+        font-size: font-size(3xl);
+      }
     }
     
     .price-duration {
@@ -255,21 +304,28 @@
 
 // Images des services
 .service-image {
-  margin: spacing(8) 0;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
   
   img {
+    width: 100%;
     max-width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
     border-radius: border-radius(xl);
     box-shadow: shadow(md);
     transition: all $transition-duration $transition-timing;
+    object-fit: cover;
     
     &:hover {
       transform: scale(1.02);
       box-shadow: shadow(lg);
     }
+  }
+  
+  @include media-up(lg) {
+    margin: spacing(8) 0;
   }
 }
 

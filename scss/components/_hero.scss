@@ -2,7 +2,10 @@
 
 .hero {
   @include section-spacing;
-  margin-top: 80px; // Espace pour header fixe
+  
+  & {
+    margin-top: 80px; // Espace pour header fixe
+  }
   
   @include media-down(md) {
     margin-top: 0;
@@ -12,10 +15,13 @@
 
 .hero-container {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(12);
-  align-items: center;
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(12);
+    align-items: center;
+  }
   
   @include media-up(lg) {
     grid-template-columns: 1fr 1fr;

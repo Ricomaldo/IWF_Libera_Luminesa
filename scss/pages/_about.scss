@@ -2,10 +2,13 @@
 
 .about-hero {
   @include section-spacing;
-  background: linear-gradient(135deg, color(hero-accent-bg), color(hero-primary-bg));
-  color: white;
-  text-align: center;
-  margin-top: 80px;
+  
+  & {
+    background: linear-gradient(135deg, color(hero-accent-bg), color(hero-primary-bg));
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+  }
   
   @include media-down(md) {
     margin-top: 0;
@@ -23,9 +26,12 @@
 
 .journey-content {
   @include container;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+  
+  & {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
   
   .journey-text {
     font-size: font-size(lg);
@@ -40,14 +46,20 @@
 
 .formations-section {
   @include section-spacing;
-  background: color(gray-50);
+  
+  & {
+    background: color(gray-50);
+  }
 }
 
 .formations-grid {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(6);
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(6);
+  }
   
   @include media-up(md) {
     grid-template-columns: repeat(2, 1fr);
@@ -170,15 +182,21 @@
 // Values section
 .values-section {
   @include section-spacing;
-  background: linear-gradient(135deg, color(hero-primary-bg), color(rose-light));
+  
+  & {
+    background: linear-gradient(135deg, color(hero-primary-bg), color(rose-light));
+  }
 }
 
 .values-grid {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(8);
-  margin-top: spacing(12);
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(8);
+    margin-top: spacing(12);
+  }
   
   @include media-up(sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -236,10 +254,13 @@
 
 .why-content {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(12);
-  align-items: center;
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(12);
+    align-items: center;
+  }
   
   @include media-up(lg) {
     grid-template-columns: 2fr 1fr;

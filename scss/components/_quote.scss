@@ -25,11 +25,14 @@
 
 .quote-container {
   @include container;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: spacing(8);
-  position: relative;
+  
+  & {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: spacing(8);
+    position: relative;
+  }
   
   @include media-up(lg) {
     flex-direction: row;

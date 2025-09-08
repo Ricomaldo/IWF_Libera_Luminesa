@@ -24,7 +24,7 @@
     <meta property="og:image" content="https://liberaluminosa.fr/assets/images/severine/salle_zen.jpeg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact - Libera Luminosa">
-    <meta name="twitter:description" content="Je vous réponds sous 24h.">
+    <meta name="twitter:description" content="Réponse personnalisée sous 24h.">
     <meta name="twitter:image" content="https://liberaluminosa.fr/assets/images/severine/salle_zen.jpeg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,10 +119,10 @@
                 <div class="contact-form-section">
                     <h2>Formulaire de contact</h2>
                     <p class="contact-form-intro">
-                        Utilisez ce formulaire pour me poser vos questions ou prendre rendez-vous. Je vous réponds dans les 24h.
+                        Utilisez ce formulaire pour poser vos questions ou prendre rendez-vous. Réponse personnalisée dans les 24h.
                     </p>
                     
-                    <form class="contact-form" action="http://69.62.107.136/contact-handler.php" method="POST">
+                    <form class="contact-form" action="https://n8n.irimwebforge.com/webhook-test/libera-luminosa-contact" method="POST">
                         <div class="form-group">
                             <label for="nom" class="required">Nom et Prénom</label>
                             <input type="text" id="nom" name="nom" required aria-describedby="nom-hint">
@@ -169,6 +169,25 @@
                             </button>
                         </div>
                     </form>
+
+                    <!-- Actions rapides -->
+                    <div class="quick-actions">
+                        <h3>Actions rapides</h3>
+                        <div class="actions-grid">
+                            <a href="tel:0651808436" class="btn btn-primary">
+                                <i data-lucide="phone"></i>
+                                Appeler maintenant
+                            </a>
+                            <a href="mailto:severinekohler80@gmail.com" class="btn btn-secondary">
+                                <i data-lucide="mail"></i>
+                                Envoyer un email
+                            </a>
+                            <a href="mes-accompagnements.html" class="btn btn-outline">
+                                <i data-lucide="heart-handshake"></i>
+                                Voir mes accompagnements
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Informations de contact -->
@@ -271,24 +290,6 @@
                         </div>
                     </div>
 
-                    <!-- Actions rapides -->
-                    <div class="quick-actions">
-                        <h3>Actions rapides</h3>
-                        <div class="actions-grid">
-                            <a href="tel:0651808436" class="btn btn-primary">
-                                <i data-lucide="phone"></i>
-                                Appeler maintenant
-                            </a>
-                            <a href="mailto:severinekohler80@gmail.com" class="btn btn-secondary">
-                                <i data-lucide="mail"></i>
-                                Envoyer un email
-                            </a>
-                            <a href="mes-accompagnements.html" class="btn btn-outline">
-                                <i data-lucide="heart-handshake"></i>
-                                Voir mes accompagnements
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

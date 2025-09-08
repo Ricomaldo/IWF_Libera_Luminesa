@@ -12,15 +12,21 @@
 // About Intro Section
 .about-intro {
   @include section-spacing;
-  background: linear-gradient(135deg, color(hero-primary-bg), color(hero-secondary-bg));
+  
+  & {
+    background: linear-gradient(135deg, color(hero-primary-bg), color(hero-secondary-bg));
+  }
 }
 
 .about-content {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(12);
-  align-items: center;
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(12);
+    align-items: center;
+  }
   
   @include media-up(lg) {
     grid-template-columns: 2fr 1fr;
@@ -62,8 +68,11 @@
 
 .about-actions {
   @include container;
-  text-align: center;
-  margin-top: spacing(12);
+  
+  & {
+    text-align: center;
+    margin-top: spacing(12);
+  }
 }
 
 // Accompagnements Preview Section
@@ -73,10 +82,13 @@
 
 .accompagnements-grid {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(8);
-  margin-bottom: spacing(12);
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(8);
+    margin-bottom: spacing(12);
+  }
   
   @include media-up(sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -90,20 +102,29 @@
 
 .accompagnements-actions {
   @include container;
-  text-align: center;
+  
+  & {
+    text-align: center;
+  }
 }
 
 // Contact Preview Section
 .contact-preview {
   @include section-spacing;
-  background: color(gray-50);
+  
+  & {
+    background: color(gray-50);
+  }
 }
 
 .contact-grid {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(8);
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(8);
+  }
   
   @include media-up(md) {
     grid-template-columns: 1fr 1fr;
@@ -166,14 +187,20 @@
 // Testimonials Section
 .testimonials {
   @include section-spacing;
-  background: linear-gradient(135deg, color(testimonial-bg), color(hero-primary-bg));
+  
+  & {
+    background: linear-gradient(135deg, color(testimonial-bg), color(hero-primary-bg));
+  }
 }
 
 .testimonials-grid {
   @include container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: spacing(8);
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(8);
+  }
   
   @include media-up(md) {
     grid-template-columns: repeat(2, 1fr);
