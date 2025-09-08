@@ -3727,6 +3727,9 @@ p:last-child {
 }
 
 .service-detail-container {
+  box-sizing: border-box;
+}
+.service-detail-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -3742,21 +3745,9 @@ p:last-child {
     padding: 0 2rem;
   }
 }
-.service-detail-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "image" "content" "meta";
-  gap: 1rem;
-  width: 100%;
-  max-width: 100%;
-}
-@media (min-width: 768px) {
-  .service-detail-container {
-    gap: 1.5rem;
-  }
-}
 @media (min-width: 992px) {
   .service-detail-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "content image" "meta quote";
     gap: 1.5rem 2rem;
@@ -3764,22 +3755,34 @@ p:last-child {
   }
 }
 
-.service-image {
-  grid-area: image;
+@media (min-width: 992px) {
+  .service-image {
+    grid-area: image;
+  }
+  .service-content {
+    grid-area: content;
+  }
+  .service-meta {
+    grid-area: meta;
+  }
+  .service-quote {
+    grid-area: quote;
+  }
 }
-
-.service-content {
-  grid-area: content;
+@media (max-width: 767px) {
+  .service-image,
+  .service-content,
+  .service-meta,
+  .service-quote {
+    margin-bottom: 1.5rem;
+  }
+  .service-image:last-child,
+  .service-content:last-child,
+  .service-meta:last-child,
+  .service-quote:last-child {
+    margin-bottom: 0;
+  }
 }
-
-.service-meta {
-  grid-area: meta;
-}
-
-.service-quote {
-  grid-area: quote;
-}
-
 .service-content {
   width: 100%;
   max-width: 100%;
@@ -4015,7 +4018,7 @@ p:last-child {
   font-weight: 600;
   color: #8B6F47;
   font-size: 0.875rem;
-  white-space: nowrap;
+  white-space: normal;
   flex-shrink: 0;
 }
 @media (max-width: 575px) {
@@ -4033,11 +4036,9 @@ p:last-child {
   width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
   border-radius: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
-  object-fit: cover;
 }
 .service-image img:hover {
   transform: scale(1.02);
@@ -4106,7 +4107,6 @@ p:last-child {
 }
 .about-hero {
   background: linear-gradient(135deg, #E8C4B8, #F5F1E8);
-  color: white;
   text-align: center;
   margin-top: 80px;
 }

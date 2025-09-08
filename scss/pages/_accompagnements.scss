@@ -37,24 +37,11 @@
 
 .service-detail-container {
   @include container;
+  box-sizing: border-box;
   
-  & {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "image"
-      "content"
-      "meta";
-    gap: spacing(4);
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  @include media-up(md) {
-    gap: spacing(6);
-  }
-  
+  // Pas de grille sur mobile - flux normal
   @include media-up(lg) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "content image"
@@ -64,11 +51,27 @@
   }
 }
 
-// Attribution des zones
-.service-image { grid-area: image; }
-.service-content { grid-area: content; }
-.service-meta { grid-area: meta; }
-.service-quote { grid-area: quote; }
+// Attribution des zones - seulement sur desktop
+@include media-up(lg) {
+  .service-image { grid-area: image; }
+  .service-content { grid-area: content; }
+  .service-meta { grid-area: meta; }
+  .service-quote { grid-area: quote; }
+}
+
+// Sur mobile/tablette - flux normal avec espacement
+@include media-down(md) {
+  .service-image,
+  .service-content,
+  .service-meta,
+  .service-quote {
+    margin-bottom: spacing(6);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
 .service-content {
   width: 100%;
@@ -323,7 +326,7 @@
   font-weight: font-weight(semibold);
   color: color(accent);
   font-size: font-size(sm);
-  white-space: nowrap;
+  white-space: normal;
   flex-shrink: 0;
   
   @include media-down(sm) {
@@ -341,11 +344,9 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
     border-radius: border-radius(xl);
     box-shadow: shadow(md);
     transition: all $transition-duration $transition-timing;
-    object-fit: cover;
     
     &:hover {
       transform: scale(1.02);
