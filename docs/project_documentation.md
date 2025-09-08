@@ -55,8 +55,8 @@
 
 ### Couleurs Inspirées Univers Séverine
 - **Primaire :** Doré lumineux (#D4AF37) - rappel "Luminosa"
-- **Secondaire :** Blanc nacré (#F8F8FF) - pureté/sérénité
-- **Accent :** Vert sauge (#9CAF88) - aromathérapie/nature
+- **Secondaire :** Blanc nacré (#F5F1E8) - pureté/sérénité
+- **Accent :** Bois (#8B6F47) - aromathérapie/nature
 - **Texte :** Gris anthracite (#2F2F2F) - lisibilité
 - **Fond :** Blanc cassé (#FEFEFE)
 

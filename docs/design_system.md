@@ -233,6 +233,78 @@ xl: 1200px     // Grande desktop
 
 ---
 
+---
+
+## 🎨 Améliorations Récentes
+
+### Titres des Fiches Accompagnements
+
+Les titres H2 des services ont été améliorés avec un accent décoratif élégant :
+
+```scss
+.service-content h2 {
+  position: relative;
+  padding-bottom: spacing(4);
+  color: color(primary-text-bold);     // #6B4F0F (contraste optimal)
+  font-weight: font-weight(semibold);  // Poids renforcé
+  
+  // Trait décoratif harmonieux
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #D4AF37, #CD853F); // Doré → Bronze
+    border-radius: border-radius(full);
+    opacity: 0.8;
+  }
+}
+```
+
+**Avantages :**
+- **Élégance** : Trait décoratif subtil remplace toute bordure "moche"
+- **Harmonie** : Gradient doré-bronze de notre palette
+- **Lisibilité** : Couleur de texte renforcée (`primary-text-bold`)
+- **Cohérence** : S'intègre parfaitement au design system
+
+### Badges de Catégorie Repensés
+
+Les badges de catégorie ont été transformés d'un style "pilule" datré vers une approche minimaliste et raffinée :
+
+```scss
+.service-category {
+  color: color(primary-text);          // #8B6914 (lisible et élégant)
+  font-variant: small-caps;            // Typographie moderne
+  text-transform: lowercase;           // Plus doux que UPPERCASE
+  letter-spacing: 0.8px;              // Espacement aéré
+  
+  // Indicateur décoratif élégant
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle, #CD853F, #A0703A); // Bronze effet métallique
+    border-radius: border-radius(full);
+    opacity: 0.7;
+  }
+  
+  &::after {
+    width: 8px;
+    height: 8px;
+    background: #F5F1E8;                // Point nacré central
+  }
+}
+```
+
+**Transformation réussie :**
+- ❌ **Avant :** Badge orange en pilule avec MAJUSCULES criardes
+- ✅ **Après :** Indicateur décoratif bronze + typographie small-caps raffinée
+- **Résultat :** Élégance contemporaine parfaitement intégrée au design harmonieux
+
+---
+
 ## 🧩 Architecture SCSS
 
 ### Structure des Fichiers
@@ -317,6 +389,15 @@ scss/
 .quote-accent        // Cercle animé avec brillance
 ```
 
+### Section Vidéo
+
+```scss
+.video-section       // Section avec dégradé nacré harmonieux
+.video-container     // Container responsive 16:9
+.video-placeholder   // Placeholder avant chargement vidéo
+.pulse-play         // Animation pulsation bouton play
+```
+
 ### Navigation
 
 ```scss
@@ -325,6 +406,19 @@ scss/
 .nav-brand           // Logo + texte de marque
 .bottom-nav          // Navigation mobile bottom
 ```
+
+### Footer et Réseaux Sociaux
+
+```scss
+.footer              // Footer principal avec espacement mobile
+.footer-content      // Grid responsive 3 colonnes
+.footer-brand        // Logo et signature
+.footer-links        // Liens utiles
+.footer-social       // Boutons réseaux sociaux harmonieux
+.footer-bottom       // Copyright et mentions
+```
+
+**Boutons sociaux :** Fond nacré avec bordure rose poudré, hover doré avec ombre.
 
 ---
 

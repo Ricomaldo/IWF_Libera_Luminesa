@@ -45,8 +45,8 @@ php -S localhost:8000
 ### Design System
 - **Colors**: 
   - Primary: Golden (#D4AF37)
-  - Secondary: Pearl white (#F8F8FF)
-  - Accent: Sage green (#9CAF88)
+  - Secondary: Pearl white (#F5F1E8)
+  - Accent: Wood brown (#8B6F47)
   - Text: Anthracite gray (#2F2F2F)
 - **Typography**: Playfair Display for headings, Open Sans for body text
 - **Responsive**: Mobile-first approach with breakpoints at 768px and 1024px

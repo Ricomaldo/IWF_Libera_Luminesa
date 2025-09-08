@@ -47,20 +47,63 @@
 
 .service-content {
   .service-category {
-    background: color(badge-primary);
-    color: color(badge-text);
-    padding: spacing(2) spacing(4);
-    border-radius: border-radius(full);
+    position: relative;
+    color: color(primary-text);
     font-size: font-size(sm);
-    font-weight: font-weight(semibold);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: inline-block;
-    margin-bottom: spacing(4);
+    font-weight: font-weight(medium);
+    text-transform: lowercase;
+    font-variant: small-caps;
+    letter-spacing: 0.8px;
+    margin-bottom: spacing(3);
+    padding-left: spacing(6);
+    
+    // Icône décorative élégante avant le texte
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background: radial-gradient(circle, color(bronze), color(bronze-dark));
+      border-radius: border-radius(full);
+      opacity: 0.7;
+    }
+    
+    // Point décoratif supplémentaire
+    &::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: color(hero-primary-bg);
+      border-radius: border-radius(full);
+    }
   }
   
   h2 {
-    margin-bottom: spacing(6);
+    position: relative;
+    margin-bottom: spacing(8);
+    padding-bottom: spacing(4);
+    color: color(primary-text-bold);
+    font-weight: font-weight(semibold);
+    
+    // Trait décoratif élégant et discret
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(90deg, color(primary), color(bronze));
+      border-radius: border-radius(full);
+      opacity: 0.8;
+    }
   }
   
   .service-description {

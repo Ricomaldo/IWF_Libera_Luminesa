@@ -24,16 +24,54 @@
 
 .service-icon {
   @include flex-center;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background: linear-gradient(135deg, color(card-icon-start), color(card-icon-end));
   border-radius: border-radius(full);
   margin: 0 auto spacing(6);
+  overflow: hidden;
+  position: relative;
   
+  // Style pour les icônes (si encore utilisées)
   i {
     width: 32px;
     height: 32px;
     color: color(accent);
+  }
+  
+  // Style pour les images
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: border-radius(full);
+    transition: transform $transition-duration $transition-timing;
+    
+    // Masquer le background gradient pour les images
+    & + * {
+      background: transparent;
+    }
+  }
+  
+  // Animation au hover pour les images
+  &:hover img {
+    transform: scale(1.1);
+  }
+  
+  // Variante sans cercle pour les images (optionnel)
+  &.service-icon--image {
+    background: transparent;
+    border-radius: border-radius(lg);
+    box-shadow: shadow(md);
+    
+    img {
+      border-radius: border-radius(lg);
+    }
+    
+    &:hover {
+      box-shadow: shadow(lg);
+    }
   }
 }
 

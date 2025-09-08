@@ -65,7 +65,8 @@
     @include flex-center;
     width: 44px;
     height: 44px;
-    background: color(accent-light);
+    background: color(hero-primary-bg);
+    border: 2px solid color(hero-accent-bg);
     border-radius: border-radius(full);
     color: color(accent);
     transition: all $transition-duration $transition-timing;
@@ -73,7 +74,9 @@
     &:hover {
       background: color(primary);
       color: white;
+      border-color: color(primary);
       transform: translateY(-2px);
+      box-shadow: shadow(md);
     }
     
     i {
