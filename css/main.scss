@@ -1287,6 +1287,12 @@ p:last-child {
   color: #8B6F47;
   font-style: italic;
 }
+.footer-brand .footer-therapist {
+  margin-top: 1rem !important;
+  font-size: 0.875rem !important;
+  font-style: normal !important;
+  opacity: 0.8;
+}
 
 .footer-links {
   display: flex;
@@ -3767,6 +3773,64 @@ p:last-child {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.service-tarifs {
+  margin: 2rem 0;
+}
+.service-tarifs h4 {
+  color: #8B6914;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.tarifs-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tarif-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #F5F1E8;
+  border-left: 4px solid #8B6F47;
+  transition: all 0.3s ease-in-out;
+}
+.tarif-item:hover {
+  background: #E8C4B8;
+  transform: translateX(4px);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tarif-name {
+  font-weight: 500;
+  color: #2C1810;
+  font-size: 0.875rem;
+}
+
+.tarif-price {
+  font-weight: 600;
+  color: #8B6F47;
+  font-size: 0.875rem;
+}
+
+.service-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+.service-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.service-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .about-hero {

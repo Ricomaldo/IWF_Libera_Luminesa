@@ -194,3 +194,68 @@
   }
 }
 
+// Section pour les tarifs détaillés
+.service-tarifs {
+  margin: spacing(8) 0;
+  
+  h4 {
+    color: color(primary-text);
+    margin-bottom: spacing(4);
+    font-weight: font-weight(semibold);
+  }
+}
+
+.tarifs-grid {
+  display: grid;
+  gap: spacing(4);
+  margin-top: spacing(4);
+}
+
+.tarif-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: spacing(4);
+  background: color(card-bg-secondary);
+  border-radius: border-radius(md);
+  border-left: 4px solid color(accent);
+  transition: all $transition-duration $transition-timing;
+  
+  &:hover {
+    background: color(card-bg-hover);
+    transform: translateX(4px);
+    box-shadow: shadow(sm);
+  }
+}
+
+.tarif-name {
+  font-weight: font-weight(medium);
+  color: color(text);
+  font-size: font-size(sm);
+}
+
+.tarif-price {
+  font-weight: font-weight(semibold);
+  color: color(accent);
+  font-size: font-size(sm);
+}
+
+// Images des services
+.service-image {
+  margin: spacing(8) 0;
+  text-align: center;
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: border-radius(xl);
+    box-shadow: shadow(md);
+    transition: all $transition-duration $transition-timing;
+    
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: shadow(lg);
+    }
+  }
+}
+

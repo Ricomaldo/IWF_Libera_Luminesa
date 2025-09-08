@@ -78,14 +78,14 @@ Mon chemin.
 
 Je m'appelle Séverine.
 
-L'essence de mon parcours professionnel a toujours été l'inspiration de prendre soin des autres. Mon cheminement en tant qu'ancienne aide-soignante m'a dotée d'une écoute, d'une sensibilité et d'un odorat développé qui couplées à mon amour intrinsèque pour les arômes délicats m'ont naturellement conduite vers la voie de la reconversion. Trouvant une résonnnance profonde dans le monde des fragrances Olfactives ainsi que leurs pouvoirs évocateurs et libérateurs, j'ai consacré mon énergie à me former à l'Olfactothérapie de Gilles Fournil qui ne fut pas seulement une quête professionnelle mais aussi personnelle. L'Olfactocoaching est venu enrichir ce processus sublimé par les effluves aromatiques des huiles essentielles Doterra "Don de la terre". La Réflexologie pluridisciplinaire complète cette belle symphonie sensorielle. Ma mission est d'éclairer le chemin de chacun en semant des graines de bien-être vers un épanouissement personnel dans la bienveillance. Ces différentes touches de lumières forment l'essence même de Libera Luminosa - Harmonie de l'Être offrant un cocon de lumière et de sérénité intérieure.
+L'essence de mon parcours professionnel a toujours été l'inspiration de prendre soin des autres. Mon cheminement en tant qu'ancienne aide-soignante m'a dotée d'une écoute, d'une sensibilité et d'un odorat développé qui couplées à mon amour intrinsèque pour les arômes délicats m'ont naturellement conduite vers la voie de la reconversion. Trouvant une résonnnance profonde dans le monde des fragrances Olfactives ainsi que leurs pouvoirs évocateurs et libérateurs, j'ai consacré mon énergie à me former à l'Olfactothérapie de Gilles Fournil qui ne fut pas seulement une quête professionnelle mais aussi personnelle. L'Olfactocoaching est venu enrichir ce processus sublimé par les effluves aromatiques des huiles essentielles dōTERRA "Don de la terre". La Réflexologie pluridisciplinaire complète cette belle symphonie sensorielle. Ma mission est d'éclairer le chemin de chacun en semant des graines de bien-être vers un épanouissement personnel dans la bienveillance. Ces différentes touches de lumières forment l'essence même de Libera Luminosa - Harmonie de l'Être offrant un cocon de lumière et de sérénité intérieure.
 ```
 
 ### Services à Présenter
 1. **L'Olfactothérapie** - Gilles Fournil
 2. **Évasion Olfactive**
 3. **L'Olfactocoaching**
-4. **Harmonie & Doterra**
+4. **Harmonie & dōTERRA**
 
 ### Photos
 - **Qualité :** Professionnelles déjà fournies
@@ -125,7 +125,7 @@ L'essence de mon parcours professionnel a toujours été l'inspiration de prendr
 - Prise RDV automatique
 - Paiement en ligne
 - Blog aromathérapie
-- Boutique produits Doterra
+- Boutique produits dōTERRA
 
 ## 📅 Planning Détaillé
 

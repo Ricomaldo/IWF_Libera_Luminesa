@@ -12,7 +12,7 @@ Mon cheminement en tant qu'ancienne aide-soignante m'a doté d'une écoute, d'un
 
 Trouvant une résonance profonde dans le monde des fragrances olfactives ainsi que de leur pouvoir évocateur et libérateur, j'ai consacré mon énergie à me former à l'Olfactothérapie de Gilles Fournil qui ne fut pas seulement une quête professionnelle mais également personnelle. 
 
-L'Olfactocoaching a été enrichi un processus sublimé par les effluves aromatiques des huiles essentielles pures Doterra (don de la terre).
+L'Olfactocoaching a été enrichi un processus sublimé par les effluves aromatiques des huiles essentielles pures dōTERRA (don de la terre).
 
 La réflexologie pluridisciplinaire et Exhalessence sont venus compléter cette belle symphonie sensorielle.
 
@@ -38,7 +38,7 @@ Ces différentes touches de lumière forment l'essence même de Libera Luminosa-
 
 7. **Diplôme Olfactocoaching** Elisabeth Molina et Gilles Fournil 18 octobre 2020
 
-8. **Certificat Aromatouch Technique** Docteur David K.Hill Doterra 7 août 2021 
+8. **Certificat Aromatouch Technique** Docteur David K.Hill dōTERRA 7 août 2021 
 
 9. **Diplôme d'Olfactothérapie** Gilles Fournil 16 octobre 2021 
 
@@ -84,11 +84,11 @@ Elle s'adresse à toute personne porteuse d'un projet, d'un objectif, d'une inte
 
 Grâce à l'intégration des propriétés de l'odorat vous serez libéré et trouverez des ressources pour être en harmonie avec vous-même et atteindre votre projet. 
 
-### Harmonie de l'Être - DOTERRA
+### Harmonie de l'Être - dōTERRA
 
 #### Technique Aromatouch
 
-Développé par le docteur David Hill, chiropracteur et expert en aromathérapie, cette technique utilise les huiles essentielles pures DOTERRA « don de la terre » certifiées CPTG les plus testées au monde. Elle consiste en une application d'une sélection de huit huiles et mélanges le long de la colonne vertébrale, des oreilles et de la plante des pieds. Elles réduisent le stress et renforcent le système immunitaire afin de réduire l'inflammation et d'équilibrer le système nerveux et l'homéostasie. 
+Développé par le docteur David Hill, chiropracteur et expert en aromathérapie, cette technique utilise les huiles essentielles pures dōTERRA « don de la terre » certifiées CPTG les plus testées au monde. Elle consiste en une application d'une sélection de huit huiles et mélanges le long de la colonne vertébrale, des oreilles et de la plante des pieds. Elles réduisent le stress et renforcent le système immunitaire afin de réduire l'inflammation et d'équilibrer le système nerveux et l'homéostasie. 
 
 #### Aromatouch mains
 
