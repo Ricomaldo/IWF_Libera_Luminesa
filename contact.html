@@ -118,7 +118,7 @@
                 <!-- Formulaire de contact -->
                 <div class="contact-form-section">
                     <h2>Formulaire de contact</h2>
-                    <p style="margin-bottom: 2rem; color: #737373;">
+                    <p class="contact-form-intro">
                         Utilisez ce formulaire pour me poser vos questions ou prendre rendez-vous. Je vous réponds dans les 24h.
                     </p>
                     
@@ -175,8 +175,8 @@
                 <div class="contact-info-section">
                     <div class="info-card">
                         <h3>Séverine Kohler</h3>
-                        <p style="color: #8B6914; font-style: italic; margin-bottom: 2rem;">
-                            Thérapeute certifiée en Olfactothérapie, Olfactocoaching et Réflexologie
+                        <p class="contact-person-title">
+                            Olfactothérapeute, Olfactocoach, Réflexologue pluridisciplinaire, Conseillère bien-être Dōterra, Conseillère Exhalessence
                         </p>
 
                         <div class="contact-item">
@@ -192,7 +192,7 @@
                             <div>
                                 <h4>Téléphone</h4>
                                 <p><a href="tel:0651808436">06 51 80 84 36</a></p>
-                                <p style="font-size: 0.9rem; color: #737373;">
+                                <p class="contact-details">
                                     Lundi à Vendredi : 9h - 19h<br>
                                     Samedi : 9h - 17h
                                 </p>
@@ -204,7 +204,7 @@
                             <div>
                                 <h4>Email</h4>
                                 <p><a href="mailto:severinekohler80@gmail.com">severinekohler80@gmail.com</a></p>
-                                <p style="font-size: 0.9rem; color: #737373;">
+                                <p class="contact-details">
                                     Réponse sous 24h
                                 </p>
                             </div>
@@ -214,14 +214,10 @@
                             <i data-lucide="clock"></i>
                             <div>
                                 <h4>Horaires de consultation</h4>
-                                <p>
-                                    <strong>Lundi à Vendredi :</strong> 9h - 19h<br>
-                                    <strong>Samedi :</strong> 9h - 17h<br>
-                                    <strong>Dimanche :</strong> Fermé
-                                </p>
-                                <p style="font-size: 0.9rem; color: #737373; margin-top: 0.5rem;">
-                                    Rendez-vous uniquement sur RDV
-                                </p>
+                                <div class="rdv-highlight">
+                                    <i data-lucide="calendar-check"></i>
+                                    <span>Rendez-vous uniquement sur RDV</span>
+                                </div>
                             </div>
                         </div>
 
@@ -242,33 +238,33 @@
                     <div class="info-card">
                         <h3>Informations pratiques</h3>
                         
-                        <div style="margin-bottom: 1.5rem;">
-                            <h4 style="color: #D4AF37; margin-bottom: 0.5rem;">Première consultation</h4>
-                            <p style="font-size: 0.9rem; line-height: 1.6;">
+                        <div class="info-section">
+                            <h4>Première consultation</h4>
+                            <p>
                                 Nous prendrons le temps de faire connaissance et de définir ensemble l'accompagnement 
                                 le mieux adapté à vos besoins. N'hésitez pas à me poser toutes vos questions.
                             </p>
                         </div>
 
-                        <div style="margin-bottom: 1.5rem;">
-                            <h4 style="color: #D4AF37; margin-bottom: 0.5rem;">Modalités de paiement</h4>
-                            <p style="font-size: 0.9rem; line-height: 1.6;">
-                                Espèces, chèques ou virements bancaires acceptés.<br>
+                        <div class="info-section">
+                            <h4>Modalités de paiement</h4>
+                            <p>
+                                Espèces, chèques ou cartes bancaires acceptés.<br>
                                 Règlement à la fin de chaque séance.
                             </p>
                         </div>
 
-                        <div style="margin-bottom: 1.5rem;">
-                            <h4 style="color: #D4AF37; margin-bottom: 0.5rem;">Annulation</h4>
-                            <p style="font-size: 0.9rem; line-height: 1.6;">
+                        <div class="info-section">
+                            <h4>Annulation</h4>
+                            <p>
                                 Merci de prévenir au moins 24h à l'avance en cas d'empêchement.<br>
                                 Les séances non annulées sont dues.
                             </p>
                         </div>
 
-                        <div>
-                            <h4 style="color: #D4AF37; margin-bottom: 0.5rem;">Confidentialité</h4>
-                            <p style="font-size: 0.9rem; line-height: 1.6;">
+                        <div class="info-section">
+                            <h4>Confidentialité</h4>
+                            <p>
                                 Vos échanges sont couverts par le secret professionnel.<br>
                                 Votre bien-être est ma priorité absolue.
                             </p>
@@ -278,7 +274,7 @@
                     <!-- Actions rapides -->
                     <div class="quick-actions">
                         <h3>Actions rapides</h3>
-                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="actions-grid">
                             <a href="tel:0651808436" class="btn btn-primary">
                                 <i data-lucide="phone"></i>
                                 Appeler maintenant
@@ -302,11 +298,14 @@
             <div class="container">
                 <h2 class="section-title">Localisation du cabinet</h2>
                 <div class="map-container" data-map-container>
-                    <div style="display:flex;align-items:center;justify-content:center;height:400px;background:#E5E5E5;border-radius:1rem;">
-                        <button class="btn btn-primary js-load-map" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.8395916665855!2d7.117901776325895!3d47.658061971812654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c55e3c8a8a8b%3A0x8e99e3e1c5b3c3c3!2s30%20Rue%20de%20la%20Station%2C%2068700%20Aspach-le-Bas!5e0!3m2!1sfr!2sfr!4v1692345678901!5m2!1sfr!2sfr">Afficher la carte</button>
+                    <div class="map-placeholder">
+                        <button class="btn btn-primary js-load-map" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.8395916665855!2d7.117901776325895!3d47.658061971812654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c55e3c8a8a8b%3A0x8e99e3e1c5b3c3c3!2s30%20Rue%20de%20la%20Station%2C%2068700%20Aspach-le-Bas!5e0!3m2!1sfr!2sfr!4v1692345678901!5m2!1sfr!2sfr" aria-label="Afficher la carte de localisation du cabinet">
+                            <i data-lucide="map-pin"></i>
+                            Afficher la carte
+                        </button>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: #737373;">
+                <p class="map-info">
                     30 rue de la Station, 68700 Aspach-le-Bas - Parking gratuit disponible
                 </p>
             </div>
@@ -317,22 +316,22 @@
             <div class="contact-container">
                 <div class="info-card">
                     <h2 id="faq-title" class="section-title">Questions fréquentes</h2>
-                    <div style="display: grid; gap: 1rem;">
+                    <div class="faq-grid">
                         <details>
-                            <summary style="font-weight:600;color:#2F2F2F;">Comment prendre rendez-vous ?</summary>
-                            <div style="margin-top:0.5rem;color:#525252;">Via le <a href="contact.html">formulaire de contact</a> ou par téléphone au <a href="tel:0651808436">06 51 80 84 36</a>. Je vous réponds sous 24h.</div>
+                            <summary>Comment prendre rendez-vous ?</summary>
+                            <div class="faq-answer">Via le <a href="contact.html">formulaire de contact</a> ou par téléphone au <a href="tel:0651808436">06 51 80 84 36</a>. Je vous réponds sous 24h.</div>
                         </details>
                         <details>
-                            <summary style="font-weight:600;color:#2F2F2F;">Délais de réponse</summary>
-                            <div style="margin-top:0.5rem;color:#525252;">Sous 24h ouvrées. En cas d’urgence, privilégiez l’appel téléphonique.</div>
+                            <summary>Délais de réponse</summary>
+                            <div class="faq-answer">Sous 24h ouvrées. En cas d'urgence, privilégiez l'appel téléphonique.</div>
                         </details>
                         <details>
-                            <summary style="font-weight:600;color:#2F2F2F;">Politique d’annulation</summary>
-                            <div style="margin-top:0.5rem;color:#525252;">Merci de prévenir au moins 24h à l’avance. Les séances non annulées sont dues.</div>
+                            <summary>Politique d'annulation</summary>
+                            <div class="faq-answer">Merci de prévenir au moins 24h à l'avance. Les séances non annulées sont dues.</div>
                         </details>
                         <details>
-                            <summary style="font-weight:600;color:#2F2F2F;">Première séance</summary>
-                            <div style="margin-top:0.5rem;color:#525252;">Nous faisons un point sur vos besoins pour définir l’accompagnement le plus adapté (durée 30 min à 2h selon la méthode).</div>
+                            <summary>Première séance</summary>
+                            <div class="faq-answer">Nous faisons un point sur vos besoins pour définir l'accompagnement le plus adapté (durée 30 min à 2h selon la méthode).</div>
                         </details>
                     </div>
                 </div>
@@ -346,12 +345,20 @@
             <div class="footer-brand">
                 <h3>Libera Luminosa</h3>
                 <p>Harmonie de l'Être</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">Séverine Kohler - Thérapeute</p>
+                <p style="margin-top: 1rem; font-weight: 600;">Séverine Kohler</p>
+                <p style="margin: 0.3rem 0 0 0;">Olfactothérapeute, Olfactocoach, Réflexologue pluridisciplinaire</p>
+                <p style="margin: 0.2rem 0 0 0;">Conseillère bien-être Dōterra, Conseillère Exhalessence</p>
             </div>
             <div class="footer-links">
+                <h4>Navigation</h4>
                 <a href="mentions-legales.html">Mentions légales</a>
                 <a href="mon-parcours.html">Mon parcours</a>
                 <a href="mes-accompagnements.html">Mes accompagnements</a>
+                <a href="contact.html">Contact</a>
+                
+                <h4 style="margin-top: 1.5rem;">Où me trouver aussi</h4>
+                <a href="https://aperhow.club" target="_blank">Aper'How & HOW'Pass</a>
+                <a href="https://www.facebook.com/aperhow" target="_blank">Facebook Aper'How</a>
             </div>
             <div class="footer-social">
                 <a href="https://www.facebook.com/p/Lib%C3%A9ra-Luminosa-100087633376582/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Libera Luminosa">
@@ -365,6 +372,7 @@
         <div class="footer-bottom">
             <p>&copy; 2025 Libera Luminosa - Tous droits réservés</p>
             <p>Site créé par <a href="https://irimwebforge.com" target="_blank">IRIM Webforge</a></p>
+            <p style="font-style: italic; margin-top: 0.5rem;">Avec mes remerciements à Eric Zuber (création du site) et Sylvie Gauthier (photographies)</p>
         </div>
     </footer>
 
@@ -411,46 +419,5 @@
     }
     </script>
 
-    <style>
-    .map-section {
-        padding: 5rem 0;
-        background: #F5F5F5;
-    }
-    
-    .map-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    
-    .quick-actions {
-        background: #F5F1E8;
-        padding: 2rem;
-        border-radius: 1rem;
-        border-left: 4px solid #D4AF37;
-    }
-    
-    .quick-actions h3 {
-        color: #D4AF37;
-        margin-bottom: 1.5rem;
-        text-align: center;
-    }
-    
-    .contact-item h4 {
-        color: #2F2F2F;
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-    
-    .contact-item a {
-        color: #D4AF37;
-        font-weight: 500;
-    }
-    
-    .contact-item a:hover {
-        color: #8B6914;
-    }
-    </style>
 </body>
 </html>

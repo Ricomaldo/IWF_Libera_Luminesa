@@ -12,7 +12,7 @@
   }
   
   h1 {
-    color: white;
+    color: color(text);
     margin-bottom: spacing(4);
   }
 }
@@ -31,6 +31,10 @@
     font-size: font-size(lg);
     line-height: 1.8;
     margin-bottom: spacing(8);
+    
+    strong {
+      color: color(primary);
+    }
   }
 }
 
@@ -79,5 +83,212 @@
     color: color(gray-600);
     font-size: font-size(sm);
   }
+}
+
+// Timeline styles
+.timeline {
+  position: relative;
+  margin: spacing(12) 0;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, color(primary), color(bronze));
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: spacing(12);
+  padding-left: 120px;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 44px;
+    top: 10px;
+    width: 14px;
+    height: 14px;
+    background: color(primary);
+    border-radius: border-radius(full);
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px color(primary);
+  }
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: color(primary);
+  color: white;
+  padding: spacing(2) spacing(4);
+  border-radius: border-radius(lg);
+  font-weight: font-weight(semibold);
+  font-size: font-size(sm);
+}
+
+.timeline-content {
+  background: white;
+  padding: spacing(6);
+  border-radius: border-radius(lg);
+  box-shadow: shadow(md);
+  border-left: 4px solid color(primary);
+  
+  h3 {
+    color: color(text);
+    margin-bottom: spacing(2);
+    font-size: font-size(lg);
+  }
+}
+
+.timeline-institution {
+  color: color(primary);
+  font-weight: font-weight(semibold);
+  margin-bottom: spacing(2);
+  font-size: font-size(sm);
+}
+
+.timeline-description {
+  color: color(gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Values section
+.values-section {
+  @include section-spacing;
+  background: linear-gradient(135deg, color(hero-primary-bg), color(rose-light));
+}
+
+.values-grid {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(8);
+  margin-top: spacing(12);
+  
+  @include media-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include media-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.value-card {
+  background: white;
+  padding: spacing(8);
+  border-radius: border-radius(lg);
+  text-align: center;
+  box-shadow: shadow(md);
+  transition: all $transition-duration $transition-timing;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: shadow(xl);
+  }
+  
+  h3 {
+    color: color(primary);
+    margin-bottom: spacing(4);
+  }
+  
+  p {
+    color: color(gray-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, color(primary), color(bronze));
+  border-radius: border-radius(full);
+  @include flex-center;
+  margin: 0 auto spacing(4);
+  
+  i {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+}
+
+// Why section
+.why-section {
+  @include section-spacing;
+}
+
+.why-content {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(12);
+  align-items: center;
+  
+  @include media-up(lg) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.why-text {
+  strong {
+    color: color(primary);
+  }
+}
+
+.why-image {
+  img {
+    border-radius: border-radius(lg);
+    box-shadow: shadow(xl);
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+  }
+}
+
+// Responsive adjustments
+@include media-down(md) {
+  .timeline {
+    &::before {
+      left: 20px;
+    }
+  }
+  
+  .timeline-item {
+    padding-left: 60px;
+    
+    &::before {
+      left: 14px;
+    }
+  }
+  
+  .timeline-date {
+    position: static;
+    margin-bottom: spacing(4);
+    display: inline-block;
+  }
+}
+
+// Footer therapist info specific to about page
+.footer-therapist {
+  margin-top: spacing(4) !important;
+  font-size: font-size(sm) !important;
+  color: color(gray-600);
 }
 
