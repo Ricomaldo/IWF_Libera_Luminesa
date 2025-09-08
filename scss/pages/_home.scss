@@ -12,7 +12,7 @@
 // About Intro Section
 .about-intro {
   @include section-spacing;
-  background: linear-gradient(135deg, color(secondary), color(gray-50));
+  background: linear-gradient(135deg, color(hero-primary-bg), color(hero-secondary-bg));
 }
 
 .about-content {
@@ -166,7 +166,7 @@
 // Testimonials Section
 .testimonials {
   @include section-spacing;
-  background: linear-gradient(135deg, color(accent-light), color(secondary));
+  background: linear-gradient(135deg, color(testimonial-bg), color(hero-primary-bg));
 }
 
 .testimonials-grid {

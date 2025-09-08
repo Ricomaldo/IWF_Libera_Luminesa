@@ -13,7 +13,7 @@
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, color(primary), transparent);
+    background: linear-gradient(90deg, transparent, color(badge-primary), transparent);
     transition: left 0.6s ease;
   }
   
@@ -26,14 +26,14 @@
   @include flex-center;
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, color(accent-light), color(accent));
+  background: linear-gradient(135deg, color(card-icon-start), color(card-icon-end));
   border-radius: border-radius(full);
   margin: 0 auto spacing(6);
   
   i {
     width: 32px;
     height: 32px;
-    color: color(accent-dark);
+    color: color(accent);
   }
 }
 
@@ -45,7 +45,7 @@
 
 .service-subtitle {
   font-size: font-size(sm);
-  color: color(primary);
+  color: color(primary-text);
   font-weight: font-weight(semibold);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -61,7 +61,7 @@
 .service-link {
   @include flex-center;
   gap: spacing(2);
-  color: color(primary);
+  color: color(primary-text);
   font-weight: font-weight(medium);
   transition: all $transition-duration $transition-timing;
   

@@ -2,7 +2,7 @@
 
 .contact-hero {
   @include section-spacing;
-  background: linear-gradient(135deg, color(secondary), color(accent-light));
+  background: linear-gradient(135deg, color(hero-primary-bg), color(hero-accent-bg));
   text-align: center;
   margin-top: 80px;
   

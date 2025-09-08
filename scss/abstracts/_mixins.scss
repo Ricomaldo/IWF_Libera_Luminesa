@@ -83,11 +83,11 @@
   
   @mixin btn-primary {
     @include btn-base;
-    background: linear-gradient(135deg, color(primary), color(primary-dark));
+    background: linear-gradient(135deg, color(button-primary-start), color(button-primary-end));
     color: white;
     
     &:hover:not(:disabled) {
-      background: linear-gradient(135deg, color(primary-dark), color(primary));
+      background: linear-gradient(135deg, color(button-primary-end), color(button-primary-start));
       transform: translateY(-2px);
       box-shadow: shadow(lg);
     }
@@ -95,13 +95,13 @@
   
   @mixin btn-secondary {
     @include btn-base;
-    background: color(secondary);
+    background: color(button-secondary-bg);
     color: color(text);
-    border: 2px solid color(accent);
+    border: 2px solid color(button-secondary-border);
     
     &:hover:not(:disabled) {
-      background: color(accent-light);
-      border-color: color(accent-dark);
+      background: color(button-secondary-hover);
+      border-color: color(accent);
     }
   }
   

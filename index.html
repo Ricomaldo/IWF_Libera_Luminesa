@@ -39,7 +39,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Libera Luminosa - Harmonie de l'Être",
-      "image": "https://liberaluminosa.fr/assets/images/severine/severine_regard_de_face.jpeg",
+      "image": "https://liberaluminosa.fr/assets/images/severine/photo-libera-luminosa-s-eveille.webp",
       "url": "https://liberaluminosa.fr/",
       "telephone": "+33651808436",
       "address": {
@@ -68,8 +68,14 @@
             <div class="nav-container">
                 <div class="nav-brand">
                     <a href="index.html" class="brand-link">
-                        <span class="brand-text">Libera Luminosa</span>
-                        <span class="brand-subtitle">Harmonie de l'Être</span>
+                        <picture class="brand-logo">
+                            <source srcset="assets/images/logo.webp" type="image/webp">
+                            <img src="assets/images/logo.webp" alt="Libera Luminosa - Logo" loading="eager">
+                        </picture>
+                        <div class="brand-text-container">
+                            <span class="brand-text">Libera Luminosa</span>
+                            <span class="brand-subtitle">Harmonie de l'Être</span>
+                        </div>
                     </a>
                 </div>
 
@@ -149,7 +155,23 @@
                 </div>
                 <div class="hero-image">
                     <!-- Placeholder pour photo de Séverine -->
-                    <img src="assets/images/severine/severine_envoie_un_bisou.jpeg" alt="Séverine Kohler, thérapeute en olfactothérapie et réflexologie, dans son cabinet à Aspach-le-Bas" loading="eager" decoding="async">
+                    <img src="assets/images/severine/photo-libera-luminosa-s-eveille.webp" alt="Séverine Kohler, thérapeute en olfactothérapie et réflexologie, dans son village à Aspach-le-Bas" loading="eager" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- Citation Section -->
+        <section class="quote-section" aria-labelledby="quote-content">
+            <div class="quote-container">
+                <div class="quote-content">
+                    <div class="quote-mark" aria-hidden="true">"</div>
+                    <blockquote id="quote-content" class="quote-text">
+                        L'odeur, c'est la vie
+                    </blockquote>
+                    <cite class="quote-author">Hirac Gurden</cite>
+                </div>
+                <div class="quote-decoration">
+                    <div class="quote-accent"></div>
                 </div>
             </div>
         </section>
@@ -168,7 +190,7 @@
                 </div>
                 <div class="about-image">
                     <!-- Placeholder pour photo ambiance thérapeutique -->
-                    <img src="assets/images/severine/severine_regarde_en_haut.jpeg" alt="Séverine dans son environnement thérapeutique avec huiles essentielles" loading="lazy" decoding="async">
+                    <img src="assets/images/severine/mon-chemin.webp" alt="Séverine dans un champ soufflant le vent" loading="lazy" decoding="async">
                 </div>
             </div>
             <div class="about-actions">
@@ -183,7 +205,7 @@
         <section class="accompagnements-preview" aria-labelledby="accompagnements-title">
             <div class="container">
                 <h2 id="accompagnements-title" class="section-title">Mes accompagnements</h2>
-                <p class="section-subtitle">Cinq chemins sensoriels vers votre épanouissement</p>
+                <p class="section-subtitle">Six accompagnements sensoriels vers votre épanouissement</p>
                 
                 <div class="accompagnements-grid">
                     <!-- Olfactothérapie -->
@@ -240,19 +262,37 @@
                         </a>
                     </article>
 
-                    <!-- Harmonie & Doterra -->
+                    <!-- Aromatouch -->
                     <article class="service-card">
                         <div class="service-icon">
-                            <i data-lucide="heart"></i>
+                            <i data-lucide="droplets"></i>
                         </div>
-                        <h3 class="service-title">Harmoniser l'être</h3>
-                        <p class="service-subtitle">Aromatouch & Réflexologie</p>
-                        <p class="service-description">Techniques Aromatouch Doterra et réflexologie libératrice alliant toucher et huiles essentielles pour un équilibre global du corps.</p>
+                        <h3 class="service-title">Aromatouch</h3>
+                        <p class="service-subtitle">Technique Doterra certifiée</p>
+                        <p class="service-description">Application douce d'huiles essentielles pures le long de la colonne vertébrale pour réduire le stress et renforcer votre système immunitaire.</p>
                         <div class="service-pricing">
-                            <span class="price">40€ - 75€</span>
-                            <span class="duration">30min - 1h30</span>
+                            <span class="price">40€ - 70€</span>
+                            <span class="duration">30min - 1h</span>
                         </div>
-                        <a href="mes-accompagnements.html#harmonie" class="service-link">
+                        <a href="mes-accompagnements.html#aromatouch" class="service-link">
+                            <span>Découvrir</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Réflexologie -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="hands"></i>
+                        </div>
+                        <h3 class="service-title">Réflexologie libératrice</h3>
+                        <p class="service-subtitle">Plantaire, palmaire, faciale</p>
+                        <p class="service-description">Stimulation des zones réflexes pour libérer les tensions, activer l'auto-guérison et restaurer l'équilibre énergétique naturel.</p>
+                        <div class="service-pricing">
+                            <span class="price">65€ - 75€</span>
+                            <span class="duration">1h - 1h30</span>
+                        </div>
+                        <a href="mes-accompagnements.html#reflexologie" class="service-link">
                             <span>Découvrir</span>
                             <i data-lucide="arrow-right"></i>
                         </a>

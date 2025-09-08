@@ -1,0 +1,217 @@
+// /Users/irimwebforge/Projets/pro/Libera-Luminesa/scss/components/_quote.scss
+
+.quote-section {
+  padding: spacing(20) 0;
+  background: linear-gradient(135deg, color(hero-secondary-bg), color(hero-accent-bg));
+  position: relative;
+  overflow: hidden;
+  
+  @include media-up(md) {
+    padding: spacing(24) 0;
+  }
+  
+  // Effet de profondeur subtil
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(color(rose-poudre), 0.1) 100%);
+    pointer-events: none;
+  }
+}
+
+.quote-container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: spacing(8);
+  position: relative;
+  
+  @include media-up(lg) {
+    flex-direction: row;
+    justify-content: center;
+    gap: spacing(12);
+  }
+}
+
+.quote-content {
+  text-align: center;
+  max-width: 600px;
+  position: relative;
+  
+  @include media-up(lg) {
+    text-align: left;
+  }
+}
+
+.quote-mark {
+  font-family: $font-family-heading;
+  font-size: 4rem;
+  font-weight: font-weight(bold);
+  color: color(bronze);
+  opacity: 0.3;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  pointer-events: none;
+  
+  @include media-up(md) {
+    font-size: 5rem;
+    top: -2.5rem;
+  }
+  
+  @include media-up(lg) {
+    left: -3rem;
+    transform: none;
+  }
+}
+
+.quote-text {
+  font-family: $font-family-heading;
+  font-size: font-size(2xl);
+  font-weight: font-weight(normal);
+  font-style: italic;
+  color: color(primary-text-bold);
+  line-height: 1.4;
+  margin: spacing(6) 0 spacing(4);
+  position: relative;
+  
+  @include media-up(md) {
+    font-size: font-size(3xl);
+    margin: spacing(8) 0 spacing(6);
+  }
+  
+  @include media-up(lg) {
+    font-size: font-size(4xl);
+  }
+  
+  // Effet de mise en valeur subtil
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -spacing(2);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, color(bronze), transparent);
+    
+    @include media-up(lg) {
+      left: 0;
+      transform: none;
+    }
+  }
+}
+
+.quote-author {
+  font-family: $font-family-body;
+  font-size: font-size(sm);
+  font-weight: font-weight(medium);
+  color: color(accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  position: relative;
+  
+  @include media-up(md) {
+    font-size: font-size(base);
+  }
+  
+  // Petite décoration avant le nom
+  &::before {
+    content: '— ';
+    color: color(bronze);
+    font-weight: font-weight(bold);
+  }
+}
+
+.quote-decoration {
+  display: none;
+  
+  @include media-up(lg) {
+    display: block;
+    position: relative;
+  }
+}
+
+.quote-accent {
+  width: 80px;
+  height: 80px;
+  border-radius: border-radius(full);
+  background: linear-gradient(135deg, color(card-icon-start), color(card-icon-end));
+  position: relative;
+  opacity: 0.6;
+  
+  // Animation subtile
+  animation: float 6s ease-in-out infinite;
+  
+  // Effet de brillance
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 30%;
+    height: 30%;
+    background: radial-gradient(circle, rgba(white, 0.8) 0%, transparent 70%);
+    border-radius: border-radius(full);
+  }
+  
+  // Effet d'ombre douce
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20px;
+    background: radial-gradient(ellipse, rgba(color(bronze), 0.2) 0%, transparent 70%);
+    filter: blur(8px);
+  }
+}
+
+// Animation flottante
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+// Version responsive avec mise en page adaptée
+@include media-down(sm) {
+  .quote-section {
+    padding: spacing(16) 0;
+  }
+  
+  .quote-text {
+    font-size: font-size(xl) !important;
+    margin: spacing(4) 0 spacing(3) !important;
+  }
+  
+  .quote-mark {
+    font-size: 3rem !important;
+    top: -1.5rem !important;
+  }
+  
+  .quote-author {
+    font-size: font-size(xs) !important;
+  }
+}
+
+// Effet hover sur la section (subtil)
+.quote-section:hover {
+  .quote-accent {
+    animation-duration: 4s;
+  }
+  
+  .quote-mark {
+    opacity: 0.5;
+    transition: opacity 0.6s ease;
+  }
+}

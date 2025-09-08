@@ -8,17 +8,21 @@
 $colors: (
   // Couleurs principales
   primary: #D4AF37,           // Doré lumineux - rappel "Luminosa"
-  secondary: #F8F8FF,         // Blanc nacré - pureté/sérénité  
-  accent: #9CAF88,            // Vert sauge - aromathérapie/nature
-  text: #2F2F2F,              // Gris anthracite - lisibilité
+  secondary: #F5F1E8,         // Blanc nacré - pureté/sérénité
+  accent: #8B6F47,            // Bois clair
+  text: #2C1810,              // Brun foncé - lisibilité
   background: #FEFEFE,        // Blanc cassé
+  rose-poudre: #E8C4B8,       // Couleur douce supplémentaire
+  bronze: #CD853F,            // Accent bronze
   
   // Variations
-  primary-light: #E6C757,
-  primary-dark: #B8941F,
-  accent-light: #B8CBA8,
-  accent-dark: #7A8F6A,
-  
+  primary-light: #E6C757,     // Doré clair
+  primary-dark: #B8941F,      // Doré foncé
+  accent-light: #8B6F47,      // Bois clair
+  accent-dark: #2C1810,       // Brun foncé - contraste
+  rose-light: #F2DDD5,        // Rose très pâle
+  bronze-dark: #A0703A,       // Bronze foncé
+
   // Gris
   gray-50: #FAFAFA,
   gray-100: #F5F5F5,
@@ -30,12 +34,47 @@ $colors: (
   gray-700: #404040,
   gray-800: #262626,
   gray-900: #171717,
-  
+
   // États
   success: #22C55E,
   warning: #F59E0B,
   error: #EF4444,
-  info: #3B82F6
+  info: #3B82F6,
+
+  // Variables sémantiques harmonieuses
+  hero-primary-bg: #F5F1E8,        // Blanc nacré principal
+  hero-secondary-bg: #F2DDD5,      // Rose très pâle
+  hero-accent-bg: #E8C4B8,         // Rose poudré pour richesse
+  
+  card-icon-start: #FEFEFE,        // Blanc pur
+  card-icon-end: #E8C4B8,          // Rose poudré (plus riche)
+  card-border: #E8C4B8,            // Rose poudré bordures
+  
+  button-primary-start: #D4AF37,   // Doré principal
+  button-primary-end: #A0703A,     // Bronze foncé (plus de caractère)
+  button-secondary-bg: #F5F1E8,    // Nacré
+  button-secondary-border: #E8C4B8,// Rose poudré
+  button-secondary-hover: #E8C4B8, // Rose poudré
+  
+  badge-primary: #CD853F,          // Bronze principal
+  badge-secondary: #A0703A,        // Bronze foncé pour variété
+  badge-accent: #8B6F47,           // Bois pour certains badges
+  badge-text: #FEFEFE,             // Texte badge
+  
+  price-primary: #A0703A,          // Bronze foncé (plus de poids)
+  price-secondary: #6B4F0F,        // Très foncé pour prix importants
+  
+  nav-hover: #CD853F,              // Bronze cohérent
+  nav-active: #A0703A,             // Bronze foncé
+  
+  testimonial-border: #A0703A,     // Bronze foncé caractère
+  testimonial-bg: #F2DDD5,         // Rose très pâle apaisant
+  
+  border-accent: #E8C4B8,          // Bordures douces
+  
+  // Couleurs accessibles pour texte
+  primary-text: #8B6914,           // Doré foncé pour texte (ratio 4.6:1)
+  primary-text-bold: #6B4F0F       // Doré très foncé pour texte important (ratio 7.2:1)
 );
 
 // Fonction pour récupérer les couleurs

@@ -2,7 +2,7 @@
 
 .about-hero {
   @include section-spacing;
-  background: linear-gradient(135deg, color(accent), color(accent-dark));
+  background: linear-gradient(135deg, color(hero-accent-bg), color(hero-primary-bg));
   color: white;
   text-align: center;
   margin-top: 80px;
@@ -55,10 +55,10 @@
   padding: spacing(6);
   border-radius: border-radius(lg);
   box-shadow: shadow(sm);
-  border-left: 4px solid color(primary);
+  border-left: 4px solid color(testimonial-border);
   
   .formation-year {
-    background: color(primary);
+    background: color(badge-primary);
     color: white;
     padding: spacing(1) spacing(3);
     border-radius: border-radius(full);

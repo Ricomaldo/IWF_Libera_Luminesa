@@ -12,23 +12,82 @@
 .nav-brand {
   .brand-link {
     display: flex;
+    align-items: center;
+    gap: spacing(4);
+    transition: all $transition-duration $transition-timing;
+    
+    &:hover {
+      .brand-logo {
+        transform: scale(1.05);
+      }
+      
+      .brand-text {
+        color: color(nav-hover);
+      }
+    }
+  }
+  
+  .brand-logo {
+    height: 45px;
+    width: auto;
+    flex-shrink: 0;
+    transition: transform $transition-duration $transition-timing;
+    
+    @include media-down(lg) {
+      height: 40px;
+    }
+    
+    @include media-down(md) {
+      height: 35px;
+    }
+    
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+  
+  .brand-text-container {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    
+    @include media-down(sm) {
+      display: none; // Masquer le texte sur très petits écrans si nécessaire
+    }
   }
   
   .brand-text {
     font-family: $font-family-heading;
-    font-size: font-size(2xl);
+    font-size: font-size(xl);
     font-weight: font-weight(bold);
-    color: color(primary);
+    color: color(primary-text-bold);
     line-height: 1;
+    transition: color $transition-duration $transition-timing;
+    
+    @include media-down(lg) {
+      font-size: font-size(lg);
+    }
+    
+    @include media-down(md) {
+      font-size: font-size(base);
+    }
   }
   
   .brand-subtitle {
     font-size: font-size(sm);
     color: color(accent);
     font-style: italic;
-    margin-top: spacing(1);
+    margin-top: spacing(0.5);
+    
+    @include media-down(lg) {
+      font-size: font-size(xs);
+    }
+    
+    @include media-down(md) {
+      font-size: font-size(xs);
+      margin-top: spacing(0.25);
+    }
   }
 }
 
@@ -44,9 +103,14 @@
     font-weight: font-weight(medium);
     transition: all $transition-duration $transition-timing;
     
-    &:hover, &.active {
-      background: color(accent-light);
-      color: color(primary);
+    &:hover {
+      background: color(hero-accent-bg);
+      color: color(nav-hover);
+    }
+    
+    &.active {
+      background: color(nav-active);
+      color: color(badge-text);
       
       i {
         transform: scale(1.1);
@@ -94,16 +158,16 @@
   font-weight: font-weight(medium);
   transition: all $transition-duration $transition-timing;
   
-  &.active {
-    color: color(primary);
+    &.active {
+      color: color(nav-active);
     
     i {
       transform: scale(1.2);
     }
   }
   
-  &:hover {
-    color: color(accent);
+    &:hover {
+      color: color(nav-hover);
   }
   
   i {
