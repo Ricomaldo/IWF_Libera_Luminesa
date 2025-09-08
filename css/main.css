@@ -3630,6 +3630,7 @@ p:last-child {
   padding: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas: "image" "content" "meta";
   gap: 3rem;
 }
 @media (min-width: 576px) {
@@ -3645,9 +3646,26 @@ p:last-child {
 @media (min-width: 992px) {
   .service-detail-container {
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-areas: "content image" "meta quote";
+    gap: 1.5rem 2rem;
+    align-items: start;
   }
+}
+
+.service-image {
+  grid-area: image;
+}
+
+.service-content {
+  grid-area: content;
+}
+
+.service-meta {
+  grid-area: meta;
+}
+
+.service-quote {
+  grid-area: quote;
 }
 
 .service-content .service-category {
@@ -3824,6 +3842,7 @@ p:last-child {
 .service-image img {
   max-width: 100%;
   height: auto;
+  aspect-ratio: 16/9;
   border-radius: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
@@ -3831,6 +3850,24 @@ p:last-child {
 .service-image img:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.service-quote {
+  margin: 1rem 0;
+  padding: 0 0.75rem;
+  border-left: 2px solid #D4AF37;
+}
+.service-quote blockquote {
+  font-size: 1rem;
+  color: #404040;
+  line-height: 1.6;
+  font-style: italic;
+}
+.service-quote figcaption {
+  margin-top: 0.5rem;
+  color: #525252;
+  font-size: 0.875rem;
+  font-variant: small-caps;
 }
 
 .about-hero {

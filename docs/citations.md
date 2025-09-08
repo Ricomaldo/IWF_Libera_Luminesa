@@ -2,7 +2,7 @@
 
 ## 🌸 Olfactothérapie - Libérer par les sens
 
-> *« LA RAISON D'ÊTRE DES ODEURS EST DE NOUS FAIRE SENTIR CE QU'IL Y A AU-DELA DU VISIBLE ET DES APPARENCES »*
+> *« La raison d'être des odeurs est de nous faire sentir ce qu'il y a au-delà du visible et des apparences. »*
 > 
 > **GILLES FOURNIL**
 
@@ -26,6 +26,14 @@
 
 ---
 
+## 💧 Aromatouch - Technique Doterra certifiée
+
+> *« L'Odorat est un mariage sur plusieurs plans l'humain avec le végétal l'individu avec son histoire, l'homme avec lui – même. »*
+> 
+> **GILLES FOURNIL**
+
+---
+
 ## ✨ Exhalessence - Luminescence des "Sent Bon"
 
 > *« Plongez dans l'univers enivrant de nos parfums de Grasse où, sublimer vos sens est une évidence gravée dans chacune de nos créations … »*
@@ -39,11 +47,3 @@
 > *« Les pieds sont les miroirs de l'âme et du corps. »*
 > 
 > **EUNICE D. INGHAM**
-
----
-
-## 💧 Aromatouch - Technique Doterra certifiée
-
-> *« L'Odorat est un mariage sur plusieurs plans l'humain avec le végétal l'individu avec son histoire, l'homme avec lui – même. »*
-> 
-> **GILLES FOURNIL**

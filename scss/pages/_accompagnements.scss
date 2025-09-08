@@ -36,14 +36,27 @@
   @include container;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "content"
+    "meta";
   gap: spacing(12);
   
   @include media-up(lg) {
     grid-template-columns: 1fr 1fr;
-    gap: spacing(16);
-    align-items: center;
+    grid-template-areas:
+      "content image"
+      "meta quote";
+    gap: spacing(6) spacing(8);
+    align-items: start;
   }
 }
+
+// Attribution des zones
+.service-image { grid-area: image; }
+.service-content { grid-area: content; }
+.service-meta { grid-area: meta; }
+.service-quote { grid-area: quote; }
 
 .service-content {
   .service-category {
@@ -248,6 +261,7 @@
   img {
     max-width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: border-radius(xl);
     box-shadow: shadow(md);
     transition: all $transition-duration $transition-timing;
@@ -256,6 +270,27 @@
       transform: scale(1.02);
       box-shadow: shadow(lg);
     }
+  }
+}
+
+// Citation compacte et discrète sous le contenu
+.service-quote {
+  margin: spacing(4) 0;
+  padding: 0 spacing(3);
+  border-left: 2px solid color(primary);
+  
+  blockquote {
+    font-size: font-size(base);
+    color: color(gray-700);
+    line-height: 1.6;
+    font-style: italic;
+  }
+  
+  figcaption {
+    margin-top: spacing(2);
+    color: color(gray-600);
+    font-size: font-size(sm);
+    font-variant: small-caps;
   }
 }
 
