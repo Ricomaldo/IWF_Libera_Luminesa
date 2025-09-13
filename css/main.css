@@ -3042,7 +3042,7 @@ p:last-child {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, transparent 40%, rgba(232, 196, 184, 0.1) 100%);
+  background: radial-gradient(circle at center, transparent 40%, rgba(135, 106, 65, 0.1) 100%);
   pointer-events: none;
 }
 
