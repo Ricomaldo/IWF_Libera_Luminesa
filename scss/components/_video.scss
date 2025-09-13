@@ -2,7 +2,7 @@
 
 .video-section {
   padding: spacing(20) 0;
-  background: linear-gradient(135deg, color(hero-primary-bg), color(hero-secondary-bg));
+  background: radial-gradient(ellipse at center, color(beige-clair), color(bois-tres-clair));
   
   @include media-up(md) {
     padding: spacing(24) 0;
@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, color(secondary), color(rose-light));
+  background: linear-gradient(135deg, color(secondary), color(bois-tres-clair));
   
   // Effet de profondeur avec des nuances de notre palette
   &::before {
@@ -95,5 +95,5 @@
 
 // Version alternative avec dégradé plus contrasté pour différenciation
 .video-section.alt-gradient {
-  background: linear-gradient(135deg, color(rose-light), color(hero-accent-bg));
+  background: linear-gradient(135deg, color(bois-tres-clair), color(hero-accent-bg));
 }

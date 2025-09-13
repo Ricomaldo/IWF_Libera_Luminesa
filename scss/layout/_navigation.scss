@@ -101,11 +101,16 @@
     padding: spacing(3) spacing(4);
     border-radius: border-radius(lg);
     font-weight: font-weight(medium);
+    color: color(accent); // État de base similaire au hover
     transition: all $transition-duration $transition-timing;
     
     &:hover {
-      background: color(hero-accent-bg);
-      color: color(nav-hover);
+      background: color(nav-active);
+      color: color(badge-text);
+      
+      i {
+        transform: scale(1.1);
+      }
     }
     
     &.active {

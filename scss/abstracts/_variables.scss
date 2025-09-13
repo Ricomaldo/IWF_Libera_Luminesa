@@ -12,7 +12,7 @@ $colors: (
   accent: #8B6F47,            // Bois clair
   text: #2C1810,              // Brun foncé - lisibilité
   background: #FEFEFE,        // Blanc cassé
-  rose-poudre: #E8C4B8,       // Couleur douce supplémentaire
+  bois-tres-clair: #c4a866c1,   // Marron beige doré - proche du primary
   bronze: #CD853F,            // Accent bronze
   
   // Variations
@@ -20,7 +20,7 @@ $colors: (
   primary-dark: #B8941F,      // Doré foncé
   accent-light: #8B6F47,      // Bois clair
   accent-dark: #2C1810,       // Brun foncé - contraste
-  rose-light: #F2DDD5,        // Rose très pâle
+  beige-clair: #E8D5B7,       // Beige clair - harmonie avec bois-tres-clair
   bronze-dark: #A0703A,       // Bronze foncé
 
   // Gris
@@ -43,20 +43,20 @@ $colors: (
 
   // Variables sémantiques harmonieuses
   hero-primary-bg: #F5F1E8,        // Blanc nacré principal
-  hero-secondary-bg: #F2DDD5,      // Rose très pâle
-  hero-accent-bg: #E8C4B8,         // Rose poudré pour richesse
+  hero-secondary-bg: #E8D5B7,      // Beige rosé - plus de caractère
+  hero-accent-bg: #C4A866,         // Marron beige doré pour richesse
   
   card-icon-start: #FEFEFE,        // Blanc pur
-  card-icon-end: #E8C4B8,          // Rose poudré (plus riche)
-  card-border: #E8C4B8,            // Rose poudré bordures
+  card-icon-end: #C4A866,          // Marron beige doré (plus riche)
+  card-border: #C4A866,            // Marron beige doré bordures
   card-bg-secondary: #F5F1E8,      // Fond secondaire des cartes
-  card-bg-hover: #E8C4B8,          // Fond au survol des cartes
+  card-bg-hover: #C4A866,          // Fond au survol des cartes
   
   button-primary-start: #D4AF37,   // Doré principal
   button-primary-end: #A0703A,     // Bronze foncé (plus de caractère)
   button-secondary-bg: #F5F1E8,    // Nacré
-  button-secondary-border: #E8C4B8,// Rose poudré
-  button-secondary-hover: #E8C4B8, // Rose poudré
+  button-secondary-border: #C4A866,// Marron beige doré
+  button-secondary-hover: #C4A866, // Marron beige doré
   
   badge-primary: #CD853F,          // Bronze principal
   badge-secondary: #A0703A,        // Bronze foncé pour variété
@@ -70,9 +70,9 @@ $colors: (
   nav-active: #A0703A,             // Bronze foncé
   
   testimonial-border: #A0703A,     // Bronze foncé caractère
-  testimonial-bg: #F2DDD5,         // Rose très pâle apaisant
+  testimonial-bg: #E8D5B7,         // Beige rosé apaisant
   
-  border-accent: #E8C4B8,          // Bordures douces
+  border-accent: #C4A866,          // Bordures douces
   
   // Couleurs accessibles pour texte
   primary-text: #8B6914,           // Doré foncé pour texte (ratio 4.6:1)

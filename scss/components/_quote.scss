@@ -2,7 +2,7 @@
 
 .quote-section {
   padding: spacing(20) 0;
-  background: linear-gradient(135deg, color(hero-secondary-bg), color(hero-accent-bg));
+  background: radial-gradient(ellipse at center, color(beige-clair), color(bois-tres-clair));
   position: relative;
   overflow: hidden;
   
@@ -18,7 +18,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, transparent 40%, rgba(color(rose-poudre), 0.1) 100%);
+    background: radial-gradient(circle at center, transparent 40%, rgba(color(bois-tres-clair), 0.1) 100%);
     pointer-events: none;
   }
 }
