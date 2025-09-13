@@ -232,17 +232,23 @@
 }
 
 .value-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, color(primary), color(bronze));
-  border-radius: border-radius(full);
+  width: 90px;
+  height: 70px;
   @include flex-center;
   margin: 0 auto spacing(4);
+  border-radius: border-radius(lg);
+  overflow: hidden;
   
   i {
     width: 24px;
     height: 24px;
     color: white;
+  }
+  
+  .value-logo {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
   }
 }
 
@@ -302,6 +308,82 @@
     position: static;
     margin-bottom: spacing(4);
     display: inline-block;
+  }
+}
+
+// Cabinet section
+.cabinet-section {
+  @include section-spacing;
+  
+  & {
+    background: color(gray-50);
+  }
+}
+
+.cabinet-gallery {
+  @include container;
+  
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: spacing(6);
+    margin: spacing(8) 0;
+  }
+  
+  @include media-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include media-up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: spacing(6);
+  }
+  
+  @include media-up(xl) {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cabinet-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: border-radius(lg);
+  box-shadow: shadow(md);
+  transition: all $transition-duration $transition-timing;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: shadow(xl);
+  }
+  
+  img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    transition: transform $transition-duration $transition-timing;
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.cabinet-description {
+  @include container;
+  
+  & {
+    max-width: 800px;
+    margin: spacing(8) auto 0;
+    text-align: center;
+  }
+  
+  p {
+    font-size: font-size(lg);
+    line-height: 1.8;
+    color: color(gray-700);
+    margin: 0;
   }
 }
 

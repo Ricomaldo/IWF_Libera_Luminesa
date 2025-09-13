@@ -37,6 +37,24 @@
   }
 }
 
+.mobile-logo-banner {
+  display: block;
+  width: 100%;
+  margin-bottom: spacing(8);
+  
+  @include media-up(md) {
+    display: none; // Masquer sur desktop car le logo est déjà dans le header
+  }
+}
+
+.mobile-banner-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: border-radius(xl);
+  box-shadow: shadow(md);
+}
+
 .hero-title {
   font-size: font-size(4xl);
   margin-bottom: spacing(6);
