@@ -127,6 +127,7 @@
   function initContactForm() {
     var form = document.querySelector('.contact-form');
     if (!form) return;
+    
     // Validation temps réel email
     var emailInput = document.getElementById('email');
     if (emailInput) {
@@ -136,6 +137,7 @@
         emailInput.style.borderColor = isValid || val === '' ? '#E5E5E5' : '#EF4444';
       });
     }
+    
     // Compteur caractères message
     var messageInput = document.getElementById('message');
     if (messageInput) {
@@ -153,14 +155,21 @@
       messageInput.addEventListener('input', updateCount);
       updateCount();
     }
-    // Loading state bouton submit
-    form.addEventListener('submit', function () {
+    
+    // Gestion de l'envoi du formulaire avec redirection
+    form.addEventListener('submit', function (e) {
       var submitBtn = form.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i data-lucide="loader-2"></i> Envoi…';
         if (window.lucide) window.lucide.createIcons();
       }
+      
+      // Le formulaire s'envoie normalement vers l'iframe cachée
+      // Après un court délai, rediriger vers la page de remerciement
+      setTimeout(function() {
+        window.location.href = 'merci.html';
+      }, 1000); // 1 seconde pour laisser le temps à l'envoi
     });
   }
 

@@ -38,23 +38,40 @@
 .service-detail-container {
   @include container;
   box-sizing: border-box;
-}
-
-// Desktop : Flexbox avec wrappers colonnes
-@include media-up(lg) {
-  .service-detail-container {
-    display: flex;
+  
+  // Pas de grille sur mobile - flux normal
+  @include media-up(lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: spacing(8);
     align-items: start;
   }
+}
+
+// Attribution flexible des zones - seulement sur desktop
+@include media-up(lg) {
+  // Colonne gauche : content + meta (flux naturel)
+  .service-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
   
-  // Colonnes wrappers
-  .service-column-left,
-  .service-column-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: spacing(6);
+  .service-meta {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: spacing(6);
+  }
+  
+  // Colonne droite : image + quote (flux naturel)
+  .service-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .service-quote {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: spacing(6);
   }
 }
 
@@ -401,3 +418,4 @@
     }
   }
 }
+

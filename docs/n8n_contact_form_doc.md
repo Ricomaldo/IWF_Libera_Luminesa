@@ -14,7 +14,7 @@ Webhook → Send Email (Notification)
 - **Response** : Using 'Respond to Webhook' Node
 - **Response Data** : First Entry JSON
 
-**URL générée** : `https://n8n.irimwebforge.com/webhook-test/libera-luminosa-contact`
+**URL générée** : `https://n8n.irimwebforge.com/webhook/libera-luminosa-contact`
 
 ### Node 2 : Email Notification (Pour vous)
 - **Credentials** : LWS SMTP LL
@@ -111,7 +111,7 @@ Webhook → Send Email (Notification)
 ### Modification formulaire
 ```javascript
 // Remplacer l'URL Formspree par :
-const webhookUrl = 'https://n8n.irimwebforge.com/webhook-test/libera-luminosa-contact';
+const webhookUrl = 'https://n8n.irimwebforge.com/webhook/libera-luminosa-contact';
 
 // Le reste du code reste identique
 ```
@@ -154,3 +154,11 @@ Les variables sont dans `{{$json.body.CHAMP}}` :
 - Ajouter Reply-To
 - Vérifier SPF/DKIM domaine
 - Tester depuis autre fournisseur
+
+⏺ Le mot de passe que j'ai configuré pour n8n est :
+
+  - Email : admin@irimwebforge.com
+  - Password : TempPassword123!
+
+  Tu peux te connecter avec ces identifiants sur
+  https://n8n.irimwebforge.com/

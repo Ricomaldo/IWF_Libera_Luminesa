@@ -1,0 +1,42 @@
+// Modification temporaire pour tester la nouvelle grille flexible
+
+.service-detail-container {
+  @include container;
+  box-sizing: border-box;
+  
+  // Pas de grille sur mobile - flux normal
+  @include media-up(lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(8);
+    align-items: start;
+  }
+}
+
+// Attribution flexible des zones - seulement sur desktop
+@include media-up(lg) {
+  // Colonne gauche : content + meta (flux naturel)
+  .service-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .service-meta {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: spacing(6);
+  }
+  
+  // Colonne droite : image + quote (flux naturel)
+  .service-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .service-quote {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: spacing(6);
+  }
+}
+

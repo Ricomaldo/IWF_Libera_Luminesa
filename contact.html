@@ -122,7 +122,7 @@
                         Utilisez ce formulaire pour poser vos questions ou prendre rendez-vous. Réponse personnalisée dans les 24h.
                     </p>
                     
-                    <form class="contact-form" action="https://n8n.irimwebforge.com/webhook-test/libera-luminosa-contact" method="POST">
+                    <form class="contact-form" action="https://n8n.irimwebforge.com/webhook/libera-luminosa-contact" method="POST" target="hidden-iframe">
                         <div class="form-group">
                             <label for="nom" class="required">Nom et Prénom</label>
                             <input type="text" id="nom" name="nom" required aria-describedby="nom-hint">
@@ -169,6 +169,9 @@
                             </button>
                         </div>
                     </form>
+                    
+                    <!-- Iframe cachée pour éviter la redirection -->
+                    <iframe name="hidden-iframe" style="display: none;"></iframe>
 
                     <!-- Actions rapides -->
                     <div class="quick-actions">
