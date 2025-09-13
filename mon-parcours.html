@@ -355,17 +355,29 @@
                 <p class="section-subtitle">Un espace chaleureux et apaisant conçu pour votre bien-être</p>
                 
                 <div class="cabinet-gallery">
-                    <div class="cabinet-photo">
+                    <div class="cabinet-photo" data-cabinet-index="0">
                         <img src="assets/images/cabinet/cabinet-0326.webp" alt="Vue d'ensemble du cabinet Libera Luminosa - espace accueillant et serein" loading="lazy">
+                        <div class="cabinet-overlay">
+                            <i data-lucide="zoom-in"></i>
+                        </div>
                     </div>
-                    <div class="cabinet-photo">
+                    <div class="cabinet-photo" data-cabinet-index="1">
                         <img src="assets/images/cabinet/photos-en-plus-cabinet.webp" alt="Espace de soin du cabinet - ambiance douce et relaxante" loading="lazy">
+                        <div class="cabinet-overlay">
+                            <i data-lucide="zoom-in"></i>
+                        </div>
                     </div>
-                    <div class="cabinet-photo">
+                    <div class="cabinet-photo" data-cabinet-index="2">
                         <img src="assets/images/cabinet/cabinet-0377.webp" alt="Coin détente du cabinet - lieu de ressourcement" loading="lazy">
+                        <div class="cabinet-overlay">
+                            <i data-lucide="zoom-in"></i>
+                        </div>
                     </div>
-                    <div class="cabinet-photo">
+                    <div class="cabinet-photo" data-cabinet-index="3">
                         <img src="assets/images/cabinet/cabinet-8734.webp" alt="Détail de l'aménagement du cabinet - harmonie et sérénité" loading="lazy">
+                        <div class="cabinet-overlay">
+                            <i data-lucide="zoom-in"></i>
+                        </div>
                     </div>
                 </div>
                 
@@ -394,6 +406,32 @@
                 </div>
             </div>
         </section>
+
+        <!-- Cabinet Modal -->
+        <div id="cabinetModal" class="cabinet-modal" aria-hidden="true">
+            <div class="cabinet-modal-overlay"></div>
+            <div class="cabinet-modal-content">
+                <button class="cabinet-modal-close" aria-label="Fermer la galerie">
+                    <i data-lucide="x"></i>
+                </button>
+                
+                <button class="cabinet-modal-prev" aria-label="Image précédente">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                
+                <div class="cabinet-modal-image-container">
+                    <img id="cabinetModalImage" src="" alt="" loading="lazy">
+                </div>
+                
+                <button class="cabinet-modal-next" aria-label="Image suivante">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+                
+                <div class="cabinet-modal-counter">
+                    <span id="cabinetCurrentIndex">1</span> / <span id="cabinetTotalImages">4</span>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->

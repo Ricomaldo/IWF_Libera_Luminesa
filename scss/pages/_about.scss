@@ -387,6 +387,201 @@
   }
 }
 
+// Cabinet overlay
+.cabinet-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  @include flex-center;
+  opacity: 0;
+  transition: opacity $transition-duration $transition-timing;
+  cursor: pointer;
+  
+  i {
+    width: 32px;
+    height: 32px;
+    color: white;
+  }
+}
+
+.cabinet-photo:hover .cabinet-overlay {
+  opacity: 1;
+}
+
+// Cabinet Modal
+.cabinet-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $transition-duration $transition-timing;
+  
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.cabinet-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.cabinet-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.cabinet-modal-image-container {
+  max-width: 80vw;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: border-radius(lg);
+    box-shadow: shadow(xl);
+  }
+}
+
+.cabinet-modal-close {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: border-radius(full);
+  @include flex-center;
+  cursor: pointer;
+  transition: all $transition-duration $transition-timing;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+  
+  i {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.cabinet-modal-prev,
+.cabinet-modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: border-radius(full);
+  @include flex-center;
+  cursor: pointer;
+  transition: all $transition-duration $transition-timing;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-50%);
+    }
+  }
+  
+  i {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.cabinet-modal-prev {
+  left: -80px;
+}
+
+.cabinet-modal-next {
+  right: -80px;
+}
+
+.cabinet-modal-counter {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: spacing(2) spacing(4);
+  border-radius: border-radius(full);
+  font-size: font-size(sm);
+  font-weight: font-weight(semibold);
+  backdrop-filter: blur(10px);
+}
+
+// Responsive modal
+@include media-down(md) {
+  .cabinet-modal-close {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .cabinet-modal-prev {
+    left: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .cabinet-modal-next {
+    right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .cabinet-modal-counter {
+    bottom: 20px;
+  }
+  
+  .cabinet-modal-image-container {
+    max-width: 95vw;
+    max-height: 70vh;
+  }
+}
+
 // Footer therapist info specific to about page
 .footer-therapist {
   margin-top: spacing(4) !important;

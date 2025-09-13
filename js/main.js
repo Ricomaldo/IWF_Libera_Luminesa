@@ -164,6 +164,142 @@
     });
   }
 
+  function initCabinetModal() {
+    var modal = document.getElementById('cabinetModal');
+    var modalImage = document.getElementById('cabinetModalImage');
+    var currentIndexSpan = document.getElementById('cabinetCurrentIndex');
+    var totalImagesSpan = document.getElementById('cabinetTotalImages');
+    var closeBtn = document.querySelector('.cabinet-modal-close');
+    var prevBtn = document.querySelector('.cabinet-modal-prev');
+    var nextBtn = document.querySelector('.cabinet-modal-next');
+    var overlay = document.querySelector('.cabinet-modal-overlay');
+    var cabinetPhotos = document.querySelectorAll('.cabinet-photo');
+    
+    if (!modal || !cabinetPhotos.length) return;
+    
+    var currentIndex = 0;
+    var images = [];
+    
+    // Collecte des informations des images
+    cabinetPhotos.forEach(function(photo, index) {
+      var img = photo.querySelector('img');
+      if (img) {
+        images.push({
+          src: img.src,
+          alt: img.alt
+        });
+        
+        // Ajouter l'événement de clic
+        photo.addEventListener('click', function() {
+          openModal(index);
+        });
+      }
+    });
+    
+    totalImagesSpan.textContent = images.length;
+    
+    function openModal(index) {
+      currentIndex = index;
+      updateModalImage();
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      
+      // Focus sur la modale pour l'accessibilité
+      modal.focus();
+    }
+    
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    
+    function updateModalImage() {
+      if (images[currentIndex]) {
+        modalImage.src = images[currentIndex].src;
+        modalImage.alt = images[currentIndex].alt;
+        currentIndexSpan.textContent = currentIndex + 1;
+        
+        // Mise à jour des boutons de navigation
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === images.length - 1;
+      }
+    }
+    
+    function goToPrevious() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateModalImage();
+      }
+    }
+    
+    function goToNext() {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        updateModalImage();
+      }
+    }
+    
+    // Événements de fermeture
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+    
+    // Événements de navigation
+    prevBtn.addEventListener('click', goToPrevious);
+    nextBtn.addEventListener('click', goToNext);
+    
+    // Navigation au clavier
+    document.addEventListener('keydown', function(e) {
+      if (!modal.classList.contains('active')) return;
+      
+      switch(e.key) {
+        case 'Escape':
+          closeModal();
+          break;
+        case 'ArrowLeft':
+          goToPrevious();
+          break;
+        case 'ArrowRight':
+          goToNext();
+          break;
+      }
+    });
+    
+    // Gestion du swipe sur mobile
+    var startX = 0;
+    var startY = 0;
+    
+    modal.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    });
+    
+    modal.addEventListener('touchend', function(e) {
+      if (!startX || !startY) return;
+      
+      var endX = e.changedTouches[0].clientX;
+      var endY = e.changedTouches[0].clientY;
+      
+      var diffX = startX - endX;
+      var diffY = startY - endY;
+      
+      // Vérifier que c'est un swipe horizontal
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          // Swipe vers la gauche - image suivante
+          goToNext();
+        } else {
+          // Swipe vers la droite - image précédente
+          goToPrevious();
+        }
+      }
+      
+      startX = 0;
+      startY = 0;
+    });
+  }
+
   onReady(function () {
     initLucide();
     setActiveNavigation();
@@ -172,6 +308,7 @@
     initMapClickToLoad();
     initTimelineObserver();
     initContactForm();
+    initCabinetModal();
   });
 }());
 
